@@ -1,0 +1,40 @@
+{
+    "profile": {
+        "name": "Jeremia Axel",
+        "description": "No description yet",
+        "links": [
+            {
+                "name": "github",
+                "url": "https://github.com/jeremiaaxel"
+            },
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/jeremia-axel-0b0b0a1b4/"
+            }
+        ]
+    },
+    "projects": [
+        {
+            "name": "Project 1",
+            "description": "This is project 1",
+            "tasks": [
+                {
+                    "name": "Task 1",
+                    "description": "This is task 1"
+                },
+                {
+                    "name": "Task 2",
+                    "description": "This is task 2"
+                }
+            ],
+            "techStacks": [
+                ".NET MVC",
+                "Microsoft SQL"
+            ],
+            "tags": [
+                "fullstack",
+                "backend"
+            ]
+        }
+    ]
+}
