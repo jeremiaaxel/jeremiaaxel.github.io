@@ -11,6 +11,7 @@
 import type { Task } from './task';
 
 export type Project = {
+	type: string;
 	name: string;
 	description: string;
 	tasks: Task[];

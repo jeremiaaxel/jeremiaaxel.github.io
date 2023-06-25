@@ -15,7 +15,31 @@
     },
     "projects": [
         {
-            "name": "Project 1",
+            "type": "personal",
+            "name": "Personal Project 1",
+            "description": "This is project 1",
+            "tasks": [
+                {
+                    "name": "Task 1",
+                    "description": "This is task 1"
+                },
+                {
+                    "name": "Task 2",
+                    "description": "This is task 2"
+                }
+            ],
+            "techStacks": [
+                ".NET MVC",
+                "Microsoft SQL"
+            ],
+            "tags": [
+                "fullstack",
+                "backend"
+            ]
+        },
+        {
+            "type": "internship",
+            "name": "Internship Project 1",
             "description": "This is project 1",
             "tasks": [
                 {
