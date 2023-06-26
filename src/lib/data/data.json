@@ -1,100 +1,141 @@
 {
-    "profile": {
-        "name": "Jeremia Axel",
-        "description": "No description yet",
-        "links": [
-            {
-                "name": "github",
-                "icon": "https://img.icons8.com/ios/50/github--v1.png",
-                "url": "https://github.com/jeremiaaxel"
-            },
-            {
-                "name": "linkedin",
-                "icon": "https://img.icons8.com/ios/50/linkedin.png",
-                "url": "https://www.linkedin.com/in/jeremia-axel-0b0b0a1b4/"
-            },
-            {
-                "name": "email",
-                "icon": "https://img.icons8.com/ios/50/new-post--v1.png",
-                "url": "mailto:jeremiaaxelb+myweb@gmail.com"
-            }
-        ]
-    },
-    "projects": [
+	"profile": {
+		"name": "Jeremia Axel",
+		"description": "I am a software engineer, strongly on backend side.",
+		"links": [
+			{
+				"name": "github",
+				"icon": "https://img.icons8.com/ios/50/github--v1.png",
+				"url": "https://github.com/jeremiaaxel"
+			},
+			{
+				"name": "linkedin",
+				"icon": "https://img.icons8.com/ios/50/linkedin.png",
+				"url": "https://www.linkedin.com/in/jeremia-axel-0b0b0a1b4/"
+			},
+			{
+				"name": "email",
+				"icon": "https://img.icons8.com/ios/50/new-post--v1.png",
+				"url": "mailto:jeremiaaxelb+myweb@gmail.com"
+			}
+		]
+	},
+	"projects": [
+		{
+			"type": "personal",
+			"name": "This Website",
+			"description": "The website you are seeing right now.",
+			"tasks": [
+				{
+					"name": "Sort Projects Type",
+					"description": "Show projects ordered by priority list: internship, school, personal"
+				},
+				{
+					"name": "\"Dynamic\" Skills",
+					"description": "Skills in the Skills section are retrieved from dedicated definition of skills and tech stacks in the projects section. So I don't have to write multiple times."
+				}
+			],
+			"techStacks": ["Svelte", "Typescript", "TailwindCSS"],
+			"tags": ["frontend"]
+		},
+		{
+			"type": "internship",
+			"name": "Software Engineer Intern",
+			"organization": "Suitmedia",
+			"description": "Enhanced an internal administration website made to score companies based on the items issued within the website.",
+			"tasks": [
+				{
+					"name": "Upgraded Role Based Access Control",
+					"description": "Upgraded role based access control from 2 roles into 5 roles with each specialized permissions (e.g. role that only able to issue item but not edit, role that only able to edit, role that can do both)."
+				},
+				{
+					"name": "Developed Item Approval System",
+					"description": "Developed two-tier item approval system: \"to be approved\", and \"approved\" or \"rejected\". Only approved items are calculated in the scoring."
+				},
+				{
+					"name": "Updated The Scoring Calculation",
+					"description": "Each item has different score and multiplier based on the category and sub-category. And the multiplier used also different if there is any item in certain categories. Yes, it's complicated!"
+				},
+				{
+					"name": "Refactored Some Part of the Code Base",
+					"description": "Maintainability is important! Refactored some of the functions and classes for the better maintainability, such as extracting repeatable logics into functions or putting constant items into list for easier change/scalability."
+				}
+			],
+			"techStacks": [".NET", "Microsoft SQL", "Vue.js", "Javascript", "jQuery", "Bootstrap"],
+			"tags": ["fullstack", "backend"]
+		},
         {
-            "type": "personal",
-            "name": "This Website",
-            "description": "The website you are seeing right now. This website uses Svelte.",
+            "type": "volunteering",
+            "name": "Frontend Developer/Vice Head of Website Division",
+            "organization": "Wisuda Juli 2021",
+            "description": "Developed a website made to appreciate the ITB's July 2021 graduates.",
             "tasks": [
                 {
-                    "name": "Umm...",
-                    "description": "I think you can see by yourself"
+                    "name": "Organize Frontend Team",
+                    "description": "Organized a team of five for the frontend part from developing the UI/UX to develop the website."
+                },
+                {
+                    "name": "Message for The Graduates",
+                    "description": "Developed a one-direction messaging frontend for the public to give message to the graduates."
+                },
+                {
+                    "name": "Initialized The Frontend Codebase",
+                    "description": "Set up custom scaffolding for the codebase, although never used React and Typescript before."
                 }
             ],
-            "techStacks": [
-                "Svelte"
-            ],
-            "tags": [
-                "frontend"
-            ]
+            "techStacks": ["React.js", "Sass", "Typescript"],
+            "tags": ["frontend", "manager"]
         },
         {
-            "type": "internship",
-            "name": "Software Engineer Intern",
-            "organization": "Suitmedia",
-            "description": "Enhanced an internal administration website made to score companies based on the items issued within the website.",
+            "type": "school",
+            "name": "Smart Room Air Conditioner ",
+            "description": "An Internet-of-Things (IoT) project that monitors and controls the air condition in a room. This system consists of an embedded component, a website, and a machine learning module.",
             "tasks": [
                 {
-                    "name": "Upgraded Role Based Access Control",
-                    "description": "Upgraded role based access control from 2 roles into 5 roles with each specialized permissions (e.g. role that only able to issue item but not edit, role that only able to edit, role that can do both)."
+                    "name": "Item Selection Component",
+                    "description": "Developed a multi-option single-item selection component that hits an API on selection change (Frontend)."
                 },
                 {
-                    "name": "Developed Item Approval System",
-                    "description": "Developed two-tier item approval system: \"to be approved\", and \"approved\" or \"rejected\". Only approved items are calculated in the scoring."
+                    "name": "Realtime Application State",
+                    "description": "Developed websocket API to exchange real-time state of the application between the backend and the frontend (Fullstack)."
                 },
                 {
-                    "name": "Updated The Scoring Calculation",
-                    "description": "Each item has different score and multiplier based on the category and sub-category. And the multiplier used also different if there is any item in certain categories. Yes, it's complicated!"
+                    "name": "Implemented ML Model",
+                    "description": "Implemented a TimeSeriesKMeans machine learning model to determine the air quality (Machine Learning). Also integrate the model by saving the trained model to file and using the model in the backend to determine the current condition."
                 },
                 {
-                    "name": "Refactored Some Part of the Code Base",
-                    "description": "Maintainability is important! Refactored some of the functions and classes for the better maintainability, such as extracting repeatable logics into functions or putting constant items into list for easier change/scalability."
+                    "name": "Developed Initial Data Aggregation Pipeline",
+                    "description": "Developed a data pipeline from MQTT to PySpark aggregator to get current average value of the sensors."
                 }
             ],
-            "techStacks": [
-                ".NET",
-                "Microsoft SQL"
-            ],
-            "tags": [
-                "fullstack",
-                "backend"
-            ]
+            "techStacks": ["Vue.js", "TailwindCSS", "Typescript", "Python", "FastAPI", "InfluxDB", "sklearn", "Docker", "PySpark", "MQTT", "ESP32", "WebSocket"],
+            "tags": ["fullstack", "machine learning", "data engineer"]
         }
-    ],
-    "technologies": [
-        {
-            "name": "Python",
-            "description": "Python is my programming-mother-tongue. Simple project? use python. Complex project? use python."
-        },
-        {
-            "name": "C#",
-            "description": "Is this Java or C#? I don't know. I use C# for my internship project."
-        },
-        {
-            "name": "Git",
-            "description": "Git is my middle name. I use git in every project I do. Github is my best friend."
-        },
-        {
-            "name": "Docker",
-            "description": "Rarely use docker, but I know how to use it. docker compose up, docker compose down :)"
-        },
-        {
-            "name": "Linux",
-            "description": "Linux is my daily driver. My friend brought me down this rabbit hole. From Arch, to Fedora, now Pop!_OS."
-        },
-        {
-            "name": "SQL",
-            "description": "SELECT money FROM wallet WHERE name='Jeremia'; money 0.00. Gib job pls."
-        }
-    ]
+	],
+	"technologies": [
+		{
+			"name": "Python",
+			"description": "Python is my programming-mother-tongue. Simple project? use python. Complex project? use python."
+		},
+		{
+			"name": "C#",
+			"description": "Is this Java or C#? I don't know. I use C# for my internship project."
+		},
+		{
+			"name": "Git",
+			"description": "Git is my middle name. I use git in every project I do. Github is my best friend."
+		},
+		{
+			"name": "Docker",
+			"description": "Rarely use docker, but I know how to use it. docker compose up, docker compose down :)"
+		},
+		{
+			"name": "Linux",
+			"description": "Linux is my daily driver. My friend brought me down this rabbit hole. From Arch, to Fedora, now Pop!_OS."
+		},
+		{
+			"name": "SQL",
+			"description": "SELECT money FROM wallet WHERE name='Jeremia'; money 0.00. Gib job pls."
+		}
+	]
 }

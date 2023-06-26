@@ -23,7 +23,7 @@
 	</ol>
 	<div class="tech-stack">
 		<div class="text-lg font-medium">Tech Stack(s):</div>
-		<p>{formatArrays(data.techStacks)}</p>
+		<p>{formatArrays(data.techStacks.sort(((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()))))}</p>
 	</div>
 	<div class="tags">
 		<div class="text-lg font-medium">Tag(s):</div>

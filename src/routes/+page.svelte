@@ -15,23 +15,29 @@
 
 	const profile: Profile = dataJson.profile;
 
-	const priorities = ['internship', 'school', 'personal'];
+	const priorities = ['internship', 'volunteering', 'school', 'personal'];
 	const projects: Project[] = dataJson.projects;
 
 	const technologies = dataJson.technologies;
 
 	const skillsFromProjects: string[] = extractTechStacks(projects);
 	const skillsFromTechnologies: string[] = extractTechnologies(technologies);
-	const skills = [...new Set(skillsFromProjects.concat(skillsFromTechnologies))];
+	const skills = [...new Set(skillsFromProjects.concat(skillsFromTechnologies))].sort();
 
 	const notification = {
 		title: 'Work In Progress',
-		detail: 'This website is still under development. But the content is ready.'
+		detail: 'This website is still under development. So as the content.'
 	};
 </script>
 
+<svelte:head>
+	<title>
+		Jeremia Axel's Portofolio Web
+	</title>
+</svelte:head>
+
 <section
-	class="flex flex-col my-20 space-y-4
+	class="flex flex-auto flex-col my-20 space-y-4
 		   md:container mx-auto
 		   md:w-3/5 w-full"
 >
