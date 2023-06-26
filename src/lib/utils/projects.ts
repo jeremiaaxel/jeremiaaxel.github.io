@@ -1,10 +1,10 @@
 import type { Project } from '$lib/types/project';
 
-export function sortProjectsByPriorities(data: Project[], priorities: string[]): Project[] {
-    type ProjectsByType = {
-        [key: string]: Project[]
-    };
+type ProjectsByType = {
+    [key: string]: Project[]
+};
 
+export function groupProjectsByType(data: Project[]): ProjectsByType {
     const projectsByType: ProjectsByType = data.reduce((acc: ProjectsByType, project: Project) => {
         if (acc[project.type]) {
             acc[project.type].push(project);
@@ -13,6 +13,12 @@ export function sortProjectsByPriorities(data: Project[], priorities: string[]):
         }
         return acc;
     }, {});
+
+    return projectsByType;
+}
+
+export function sortProjectsByPriorities(data: Project[], priorities: string[]): Project[] {
+    const projectsByType: ProjectsByType = groupProjectsByType(data);
     const sortedProjects: Project[] = [];
     priorities.forEach(priority => {
         if (projectsByType[priority]) {
