@@ -23,25 +23,19 @@
     "projects": [
         {
             "type": "personal",
-            "name": "Personal Project 1",
-            "description": "This is project 1",
+            "name": "This Website",
+            "description": "The website you are seeing right now. This website uses Svelte.",
             "tasks": [
                 {
-                    "name": "Task 1",
-                    "description": "This is task 1"
-                },
-                {
-                    "name": "Task 2",
-                    "description": "This is task 2"
+                    "name": "Umm...",
+                    "description": "I think you can see by yourself"
                 }
             ],
             "techStacks": [
-                ".NET MVC",
-                "Microsoft SQL"
+                "Svelte"
             ],
             "tags": [
-                "fullstack",
-                "backend"
+                "frontend"
             ]
         },
         {
