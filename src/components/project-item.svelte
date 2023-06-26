@@ -27,6 +27,6 @@
 	</div>
 	<div class="tags">
 		<div class="text-lg font-medium">Tag(s):</div>
-		<p>{formatArrays(data.tags)}</p>
+		<p class="capitalize">{formatArrays(data.tags)}</p>
 	</div>
 </section>
