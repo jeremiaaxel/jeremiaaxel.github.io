@@ -26,7 +26,7 @@
 
 	const notification = {
 		title: 'Work In Progress',
-		detail: 'This website is still under development. So as the content.'
+		detail: 'This website is still under development. But the contents are ready.'
 	};
 </script>
 
