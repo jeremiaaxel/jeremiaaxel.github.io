@@ -5,11 +5,18 @@
         "links": [
             {
                 "name": "github",
+                "icon": "https://img.icons8.com/ios/50/github--v1.png",
                 "url": "https://github.com/jeremiaaxel"
             },
             {
                 "name": "linkedin",
+                "icon": "https://img.icons8.com/ios/50/linkedin.png",
                 "url": "https://www.linkedin.com/in/jeremia-axel-0b0b0a1b4/"
+            },
+            {
+                "name": "email",
+                "icon": "https://img.icons8.com/ios/50/new-post--v1.png",
+                "url": "mailto:jeremiaaxelb+myweb@gmail.com"
             }
         ]
     },
@@ -59,6 +66,32 @@
                 "fullstack",
                 "backend"
             ]
+        }
+    ],
+    "skillsDescription": [
+        {
+            "name": "Python",
+            "description": "Python is my programming-mother-tongue. Simple project? use python. Complex project? use python."
+        },
+        {
+            "name": "C#",
+            "description": "Is this Java or C#? I don't know. I use C# for my internship project."
+        },
+        {
+            "name": "Git",
+            "description": "Git is my middle name. I use git in every project I do. Github is my best friend."
+        },
+        {
+            "name": "Docker",
+            "description": "Rarely use docker, but I know how to use it. docker compose up, docker compose down :)"
+        },
+        {
+            "name": "Linux",
+            "description": "Linux is my daily driver. My friend brought me down this rabbit hole. From Arch, to Fedora, now Pop!_OS."
+        },
+        {
+            "name": "SQL",
+            "description": "SELECT money FROM wallet WHERE name='Jeremia'; money 0.00. Gib job pls."
         }
     ]
 }

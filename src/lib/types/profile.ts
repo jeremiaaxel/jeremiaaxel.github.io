@@ -10,6 +10,8 @@
 type Link = {
 	name: string;
 	url: string;
+	icon?: string;
+	iconAlt?: string;
 };
 
 export type Profile = {
