@@ -1,4 +1,4 @@
-export type SkillDescription = {
+export type Technologies = {
 	name: string;
 	description: string;
 };

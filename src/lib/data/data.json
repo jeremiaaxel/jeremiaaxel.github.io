@@ -71,7 +71,7 @@
             ]
         }
     ],
-    "skillsDescription": [
+    "technologies": [
         {
             "name": "Python",
             "description": "Python is my programming-mother-tongue. Simple project? use python. Complex project? use python."
