@@ -7,7 +7,13 @@
 
 <section class="project">
 	<h1 class="text-xl font-medium">
-		{data.name} 
+		{#if data.url}
+			<a class="link" href={data.url}>
+				{data.name}
+			</a>
+		{:else}
+			{data.name}
+		{/if}
 		{#if data.organization}
 			@ {data.organization}
 		{/if}
@@ -23,7 +29,9 @@
 	</ol>
 	<div class="tech-stack">
 		<div class="text-lg font-medium">Tech Stack(s):</div>
-		<p>{formatArrays(data.techStacks.sort(((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()))))}</p>
+		<p>
+			{formatArrays(data.techStacks.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())))}
+		</p>
 	</div>
 	<div class="tags">
 		<div class="text-lg font-medium">Tag(s):</div>

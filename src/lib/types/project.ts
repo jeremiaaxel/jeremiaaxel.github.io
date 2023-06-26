@@ -14,6 +14,7 @@ export type Project = {
 	type: string;
 	name: string;
 	organization?: string;
+	url?: string;
 	description: string;
 	tasks: Task[];
 	techStacks: string[];

@@ -39,7 +39,7 @@
 <section
 	class="flex flex-auto flex-col my-20 space-y-4
 		   md:container mx-auto
-		   md:w-3/5 w-full"
+		   md:w-3/5 w-11/12"
 >
 	<NotificationComponent data={notification} />
 	<ProfileComponent data={profile} />

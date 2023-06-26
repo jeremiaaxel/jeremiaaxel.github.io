@@ -87,6 +87,20 @@
             "tags": ["frontend", "manager"]
         },
         {
+            "type": "volunteering",
+            "name": "StatsBot",
+			"url": "https://github.com/thieleju/statsbot/pull/15",
+            "description": "A Discord bot that shows statistics to a Discord server. A contribution to open source project as part of Hacktoberfest 2022.",
+            "tasks": [
+                {
+                    "name": "Show Chess Leaderboard",
+                    "description": "Develop a feature to show the chess leaderboard by fetching chess.com's API and format the data."
+                }
+            ],
+            "techStacks": ["Discord.js", "Javascript"],
+            "tags": ["open source contributor"]
+        },
+        {
             "type": "school",
             "name": "Smart Room Air Conditioner ",
             "description": "An Internet-of-Things (IoT) project that monitors and controls the air condition in a room. This system consists of an embedded component, a website, and a machine learning module.",
