@@ -13,6 +13,7 @@ import type { Task } from './task';
 export type Project = {
 	type: string;
 	name: string;
+	organization?: string;
 	description: string;
 	tasks: Task[];
 	techStacks: string[];

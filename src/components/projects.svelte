@@ -12,14 +12,16 @@
 
 <section id="projects">
 	<h3 class="text-3xl">Projects</h3>
-	<div class="flex flex-col space-y-3">
+	<div class="flex flex-col space-y-2">
 		{#each uniquePriorities as priority}
-			{#if sortedProjects[priority]}
-				<h3 class="text-2xl capitalize">{priority}</h3>
-				{#each sortedProjects[priority] as project}
-					<ProjectItemComponent data={project} />
-				{/each}
-			{/if}
+			<div class="project-type">
+				{#if sortedProjects[priority]}
+					<h3 class="text-xl capitalize">{priority}</h3>
+					{#each sortedProjects[priority] as project}
+						<ProjectItemComponent data={project} />
+					{/each}
+				{/if}
+			</div>
 		{/each}
 	</div>
 </section>

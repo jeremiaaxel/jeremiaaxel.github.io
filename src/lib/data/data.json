@@ -40,20 +40,29 @@
         },
         {
             "type": "internship",
-            "name": "Internship Project 1",
-            "description": "This is project 1",
+            "name": "Software Engineer Intern",
+            "organization": "Suitmedia",
+            "description": "Enhanced an internal administration website made to score companies based on the items issued within the website.",
             "tasks": [
                 {
-                    "name": "Task 1",
-                    "description": "This is task 1"
+                    "name": "Upgraded Role Based Access Control",
+                    "description": "Upgraded role based access control from 2 roles into 5 roles with each specialized permissions (e.g. role that only able to issue item but not edit, role that only able to edit, role that can do both)."
                 },
                 {
-                    "name": "Task 2",
-                    "description": "This is task 2"
+                    "name": "Developed Item Approval System",
+                    "description": "Developed two-tier item approval system: \"to be approved\", and \"approved\" or \"rejected\". Only approved items are calculated in the scoring."
+                },
+                {
+                    "name": "Updated The Scoring Calculation",
+                    "description": "Each item has different score and multiplier based on the category and sub-category. And the multiplier used also different if there is any item in certain categories. Yes, it's complicated!"
+                },
+                {
+                    "name": "Refactored Some Part of the Code Base",
+                    "description": "Maintainability is important! Refactored some of the functions and classes for the better maintainability, such as extracting repeatable logics into functions or putting constant items into list for easier change/scalability."
                 }
             ],
             "techStacks": [
-                ".NET MVC",
+                ".NET",
                 "Microsoft SQL"
             ],
             "tags": [
