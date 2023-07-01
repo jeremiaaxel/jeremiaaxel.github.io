@@ -35,7 +35,7 @@
 					"description": "Skills in the Skills section are retrieved from dedicated definition of skills and tech stacks in the projects section. So I don't have to write multiple times."
 				}
 			],
-			"techStacks": ["Svelte", "Typescript", "TailwindCSS"],
+			"techStacks": ["Svelte", "Typescript", "TailwindCSS", "Git"],
 			"tags": ["frontend"]
 		},
 		{
@@ -61,7 +61,7 @@
 					"description": "Maintainability is important! Refactored some of the functions and classes for the better maintainability, such as extracting repeatable logics into functions or putting constant items into list for easier change/scalability."
 				}
 			],
-			"techStacks": [".NET", "Microsoft SQL", "Vue.js", "Javascript", "jQuery", "Bootstrap"],
+			"techStacks": [".NET", "Microsoft SQL", "Vue.js", "Javascript", "jQuery", "Bootstrap", "Git", "C#"],
 			"tags": ["fullstack", "backend"]
 		},
         {
@@ -83,7 +83,7 @@
                     "description": "Set up custom scaffolding for the codebase, although never used React and Typescript before."
                 }
             ],
-            "techStacks": ["React.js", "Sass", "Typescript"],
+            "techStacks": ["React.js", "Sass", "Typescript", "Git"],
             "tags": ["frontend", "manager"]
         },
         {
@@ -97,7 +97,7 @@
                     "description": "Develop a feature to show the chess leaderboard by fetching chess.com's API and format the data."
                 }
             ],
-            "techStacks": ["Discord.js", "Javascript"],
+            "techStacks": ["Discord.js", "Javascript", "Git"],
             "tags": ["open source contributor"]
         },
         {
@@ -122,7 +122,7 @@
                     "description": "Developed a data pipeline from MQTT to PySpark aggregator to get current average value of the sensors."
                 }
             ],
-            "techStacks": ["Vue.js", "TailwindCSS", "Typescript", "Python", "FastAPI", "InfluxDB", "sklearn", "Docker", "PySpark", "MQTT", "ESP32", "WebSocket"],
+            "techStacks": ["Vue.js", "TailwindCSS", "Typescript", "Python", "FastAPI", "InfluxDB", "sklearn", "Docker", "PySpark", "MQTT", "ESP32", "WebSocket", "Git"],
             "tags": ["fullstack", "machine learning", "data engineer"]
         }
 	],
