@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Project } from '$lib/types/project';
+	import { Project } from '$lib/types/project';
 	import type { Profile } from '$lib/types/profile';
 
 	import dataJson from '$lib/data/data.json';
@@ -16,7 +16,11 @@
 	const profile: Profile = dataJson.profile;
 
 	const priorities = ['internship', 'volunteering', 'school', 'personal'];
-	const projects: Project[] = dataJson.projects;
+	const projects: Project[] = dataJson.projects.map((project) => {
+		let projectInstance = new Project();
+		Object.assign(projectInstance, project);
+		return projectInstance;
+	});
 
 	const technologies = dataJson.technologies;
 
@@ -28,12 +32,26 @@
 		title: 'Work In Progress',
 		detail: 'This website is still under development. But the contents are ready.'
 	};
+
+	let skillsClicked = {
+		latestClick: 0,
+		values: new Set<number>()
+	};
+
+	let skillsFilter = new Set<string>();
+
+	function changedSkillsClicked(latestClick: number, values: Set<number>) {
+		let report = '';
+		values.forEach((num) => (report += skills[num] + '|'));
+		report = report.trim();
+		skillsFilter = new Set<string>(report.split('|').filter((skillStr) => skillStr != ''));
+	}
+
+	$: changedSkillsClicked(skillsClicked.latestClick, skillsClicked.values);
 </script>
 
 <svelte:head>
-	<title>
-		Jeremia Axel's Portofolio Web
-	</title>
+	<title>Jeremia Axel's Portofolio Web</title>
 </svelte:head>
 
 <section
@@ -43,7 +61,7 @@
 >
 	<NotificationComponent data={notification} />
 	<ProfileComponent data={profile} />
-	<ProjectsComponent data={projects} {priorities} />
-	<SkillsComponent data={skills} />
+	<SkillsComponent data={skills} bind:skillsClicked />
+	<ProjectsComponent data={projects} {priorities} bind:skillsFilter />
 	<TechnologiesComponent data={technologies} />
 </section>

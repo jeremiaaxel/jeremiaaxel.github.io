@@ -1,8 +1,4 @@
-import type { Project } from '$lib/types/project';
-
-type ProjectsByType = {
-	[key: string]: Project[];
-};
+import type { Project, ProjectsByType } from '$lib/types/project';
 
 export function groupProjectsByType(data: Project[]): ProjectsByType {
 	const projectsByType: ProjectsByType = data.reduce((acc: ProjectsByType, project: Project) => {
