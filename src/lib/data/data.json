@@ -17,6 +17,11 @@
 				"name": "email",
 				"icon": "https://img.icons8.com/ios/50/new-post--v1.png",
 				"url": "mailto:jeremiaaxelb+myweb@gmail.com"
+			},
+			{
+				"name": "resume",
+				"icon": "https://img.icons8.com/ios/50/resume.png",
+				"url": "https://drive.google.com/file/d/1iMutL8PZkIxA2HhF6g0pR7NVZhwUqEMr/view?usp=sharing"
 			}
 		]
 	},
