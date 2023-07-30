@@ -15,7 +15,7 @@
 	<p>{data.description}</p>
 	<section class="links flex flex-row">
 		{#each data.links as link}
-			<a class="mx-2 link" href={link.url} target="_blank">
+			<a class="p-2 mx-1 link rounded-md bg-neutral-100 hover:bg-neutral-50" href={link.url} target="_blank">
 				{#if link.icon}
 					<img width="25" height="25" src={link.icon} alt="{link.iconAlt}"/>
 				{:else}
