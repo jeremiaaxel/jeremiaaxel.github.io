@@ -3,6 +3,7 @@
 	import type { Profile } from '$lib/types/profile';
 
 	import dataJson from '$lib/data/data.json';
+	import profileJson from '$lib/data/profile.json';
 
 	import { extractTechStacks } from '$lib/utils/projects';
 	import { extractTechnologies } from '$lib/utils/technologies';
@@ -13,7 +14,7 @@
 	import TechnologiesComponent from '../components/technologies.svelte';
 	import NotificationComponent from '../components/notification.svelte';
 
-	const profile: Profile = dataJson.profile;
+	const profile: Profile = profileJson;
 
 	const priorities = ['internship', 'volunteering', 'school', 'personal'];
 	const projects: Project[] = dataJson.projects.map((project) => {
