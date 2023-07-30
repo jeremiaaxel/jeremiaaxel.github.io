@@ -58,7 +58,9 @@
 <section
 	class="flex flex-auto flex-col my-20 space-y-4
 		   md:container mx-auto
-		   md:w-3/5 w-11/12"
+		   md:w-3/5 w-11/12
+		   bg-neutral-200
+		   px-10 py-5 rounded-lg"
 >
 	<NotificationComponent data={notification} />
 	<ProfileComponent data={profile} />

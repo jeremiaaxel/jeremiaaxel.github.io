@@ -5,7 +5,7 @@
 	export let data: Project;
 </script>
 
-<section class="project">
+<section class="project bg-neutral-100 p-5 rounded-md">
 	<h1 class="text-xl font-medium">
 		{#if data.url}
 			<a class="link" href={data.url}>
