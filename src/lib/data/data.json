@@ -79,9 +79,31 @@
             "techStacks": ["Discord.js", "Javascript", "Git"],
             "tags": ["open source contributor"]
         },
+		{
+			"type": "school",
+			"name": "Development of Testing Module for Autonomous Tram Simulation Using CARLA Simulator",
+			"description": "A final project to develop a testing module for an autonomous tram simulation using CARLA Simulator.",
+			"tasks": [
+				{
+					"name": "Developed Various Testing Scenarios",
+					"description": "Developed several testing scenarios such as time scenarios, weather scenarios, traffic scenarios, and specialized scenarios."
+				},
+				{
+					"name": "Developed Tram Control Agent",
+					"description": "Developed a tram control interface on top of CARLA's car control; enables control with only throttle and brake. Developed also an agent that enables receiving control from another computer (using ZeroMQ; in collaboration with another team member)."
+				},
+				{
+					"name": "Developed Scenario Composer",
+					"description": "Developed a python program to compose a route-testing-scenarios from a list of scenarios and run the scenario in CARLA ScenarioRunner. Scenarios used and locations are randomized."
+				}
+			],
+			"techStacks": ["Python", "CARLA Simulator", "CARLA ScenarioRunner", "Git", "Bash"],
+			"tags": ["final project", "automonous tram testing modules"]
+		},
         {
             "type": "school",
-            "name": "Smart Room Air Conditioner ",
+            "name": "Smart Room Air Conditioner",
+			"url": "https://github.com/jspmarc/IF4051-Tubes",
             "description": "An Internet-of-Things (IoT) project that monitors and controls the air condition in a room. This system consists of an embedded component, a website, and a machine learning module.",
             "tasks": [
                 {
