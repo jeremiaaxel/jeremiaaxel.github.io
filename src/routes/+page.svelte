@@ -4,6 +4,7 @@
 
 	import dataJson from '$lib/data/data.json';
 	import profileJson from '$lib/data/profile.json';
+	import sidebarJson from '$lib/data/sidebar.json';
 
 	import { extractTechStacks } from '$lib/utils/projects';
 	import { extractTechnologies } from '$lib/utils/technologies';
@@ -13,6 +14,7 @@
 	import SkillsComponent from '../components/skills.svelte';
 	import TechnologiesComponent from '../components/technologies.svelte';
 	import NotificationComponent from '../components/notification.svelte';
+	import Sidebar from '../components/sidebar.svelte';
 
 	const profile: Profile = profileJson;
 
@@ -23,7 +25,8 @@
 		return projectInstance;
 	});
 
-	const technologies = dataJson.technologies;
+	const { technologies } = dataJson;
+	const { items: sidebarItems, brand } = sidebarJson;
 
 	const skillsFromProjects: string[] = extractTechStacks(projects);
 	const skillsFromTechnologies: string[] = extractTechnologies(technologies);
@@ -56,12 +59,13 @@
 </svelte:head>
 
 <section
-	class="flex flex-auto flex-col my-20 space-y-4
+	class="flex flex-auto flex-col my-5 space-y-4
 		   md:container mx-auto
 		   md:w-3/5 w-11/12
 		   bg-neutral-200
 		   px-10 py-5 rounded-lg"
 >
+	<Sidebar brand={brand} data={sidebarItems} />
 	<NotificationComponent data={notification} />
 	<ProfileComponent data={profile} />
 	<SkillsComponent data={skills} bind:skillsClicked />

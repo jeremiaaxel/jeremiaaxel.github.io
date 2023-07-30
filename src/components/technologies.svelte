@@ -4,7 +4,7 @@
 	export let data: Technologies[];
 </script>
 
-<section class="skills-description">
+<section id="technologies" class="skills-description">
 	<h3 class="text-2xl">Technologies</h3>
 	<div class="flex flex-col space-y-3">
 		{#each data as skill}

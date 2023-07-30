@@ -1,0 +1,25 @@
+{
+    "brand": {
+        "name": "Jeremia Axel",
+        "url": "",
+        "icon": "https://img.icons8.com/ios/50/user--v1.png"
+    },
+    "items": [
+        {
+            "name": "Profile",
+            "url": "#profile"
+        },
+        {
+            "name": "Skills",
+            "url": "#skills"
+        },
+        {
+            "name": "Projects",
+            "url": "#projects"
+        },
+        {
+            "name": "Technologies",
+            "url": "#technologies"
+        }
+    ]
+}

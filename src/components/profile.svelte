@@ -10,7 +10,7 @@
 	});
 </script>
 
-<section id="profile flex flex-col">
+<section id="profile" class="flex flex-col">
 	<h1 class="text-2xl">{data.name}</h1>
 	<p>{data.description}</p>
 	<section class="links flex flex-row">

@@ -27,7 +27,7 @@
 	{#each data as skill, skillIdx}
 		<button
 			on:click={() => updateSkillsClicked(skillIdx)}
-			class="mx-2 rounded-full px-2 py-1 {skillsClicked.values.has(skillIdx)
+			class="mx-2 rounded-full px-2 py-1 hover:bg-blue-300 {skillsClicked.values.has(skillIdx)
 				? 'bg-blue-400'
 				: 'bg-blue-200'}">{skill}</button
 		>
