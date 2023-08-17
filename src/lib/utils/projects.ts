@@ -30,3 +30,7 @@ export function extractTechStacks(projects: Project[]) {
 	const uniqueTechStacks = [...new Set(techStacks.flat())];
 	return uniqueTechStacks;
 }
+
+export function containsSkills(project: Project, skills: string[]): boolean {
+	return project.techStacks.filter((value) => skills.includes(value)).length > 0;
+}

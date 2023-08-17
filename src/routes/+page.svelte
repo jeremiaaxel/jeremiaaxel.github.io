@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Project } from '$lib/types/project';
+	import type { Project } from '$lib/types/project';
 	import type { Profile } from '$lib/types/profile';
 
 	import dataJson from '$lib/data/data.json';
@@ -16,19 +16,14 @@
 	import NotificationComponent from '../components/notification.svelte';
 	import Sidebar from '../components/sidebar.svelte';
 
+	const projectPriorities = ['internship', 'volunteering', 'school', 'personal'];
+
 	const profile: Profile = profileJson;
-
-	const priorities = ['internship', 'volunteering', 'school', 'personal'];
-	const projects: Project[] = dataJson.projects.map((project) => {
-		let projectInstance = new Project();
-		Object.assign(projectInstance, project);
-		return projectInstance;
-	});
-
-	const { technologies } = dataJson;
+	const { projects, technologies, experiences } = dataJson;
 	const { items: sidebarItems, brand } = sidebarJson;
 
-	const skillsFromProjects: string[] = extractTechStacks(projects);
+
+	const skillsFromProjects: string[] = extractTechStacks(projects as Project[]);
 	const skillsFromTechnologies: string[] = extractTechnologies(technologies);
 	const skills = [...new Set(skillsFromProjects.concat(skillsFromTechnologies))].sort();
 
@@ -69,6 +64,6 @@
 	<NotificationComponent data={notification} />
 	<ProfileComponent data={profile} />
 	<SkillsComponent data={skills} bind:skillsClicked />
-	<ProjectsComponent data={projects} {priorities} bind:skillsFilter />
+	<ProjectsComponent data={projects} priorities={projectPriorities} bind:skillsFilter />
 	<TechnologiesComponent data={technologies} />
 </section>
