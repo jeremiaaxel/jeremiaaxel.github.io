@@ -3,6 +3,7 @@
 	import { formatArrays } from '$lib/utils/formatting';
 
 	export let data: Project;
+	export let onClick: () => void;
 </script>
 
 <section class="project bg-neutral-100 p-5 rounded-md">
@@ -23,7 +24,6 @@
 		{#each data.tasks as task}
 			<li class="">
 				<p class="task-name inline font-medium">{task.name}</p>
-				<p class="task-desc ps-5">{task.description}</p>
 			</li>
 		{/each}
 	</ol>
@@ -37,4 +37,11 @@
 		<div class="text-lg font-medium">Tag(s):</div>
 		<p class="capitalize">{formatArrays(data.tags)}</p>
 	</div>
+	<button 
+		type="button"
+		on:click={onClick}
+		class="btn rounded-md py-1 px-2 text-neutral-600 bg-neutral-200 hover:bg-neutral-400 hover:text-neutral-100"
+	>
+		Learn more
+	</button>
 </section>

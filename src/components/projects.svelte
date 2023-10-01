@@ -1,7 +1,10 @@
 <script lang="ts">
-	import ProjectItemComponent from './project-item.svelte';
+	// import ProjectDetailModal from './project-detail-modal.svelte';
+	import Modal from './modal/modal.svelte';
+	import ProjectCardComponent from './project-card.svelte';
 	import type { Project } from '$lib/types/project';
 	import { containsSkills, groupProjectsByType } from '$lib/utils/projects';
+	import ProjectDetail from './project-detail.svelte';
 
 	export let data: Project[];
 	export let priorities: string[] = ['internship', 'school', 'personal'];
@@ -14,9 +17,32 @@
 			? data
 			: data.filter((project) => containsSkills(project, [...skillsFilter]));
 	const sortedProjects = groupProjectsByType(data);
+
+	let selectedProject: Project;
+	let isModalOpen = false;
+	function openModal(project: Project) {
+		isModalOpen = true;
+		selectedProject = project;
+	}
+	let selectedProjectTitle = '';
+	$: {
+		if (selectedProject) {
+			selectedProjectTitle = `${selectedProject.name} ${
+				selectedProject.organization ? '@ ' + selectedProject.organization : ''
+			}`;
+		}
+	}
 </script>
 
 <section id="projects">
+	{#if selectedProject}
+		<Modal id="project-detail-modal" title={selectedProjectTitle} bind:isOpen={isModalOpen}>
+			<section slot="body">
+				<ProjectDetail data={selectedProject} id="project-detail" />
+			</section>
+		</Modal>
+	{/if}
+
 	<h3 class="text-3xl">Projects</h3>
 	<div class="flex flex-col space-y-2">
 		{#each uniquePriorities as priority}
@@ -28,7 +54,7 @@
 							class="project-item flex flex-col my-2"
 							class:hidden={!filteredProjects.includes(project)}
 						>
-							<ProjectItemComponent data={project} />
+							<ProjectCardComponent data={project} onClick={() => openModal(project)} />
 						</div>
 					{/each}
 				{/if}
