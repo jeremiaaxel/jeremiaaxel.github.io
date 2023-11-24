@@ -1,5 +1,4 @@
 <script lang="ts">
-	// import ProjectDetailModal from './project-detail-modal.svelte';
 	import Modal from './modal/modal.svelte';
 	import ProjectCardComponent from './project-card.svelte';
 	import type { Project } from '$lib/types/project';
@@ -10,12 +9,15 @@
 	export let priorities: string[] = ['internship', 'school', 'personal'];
 	export let skillsFilter: Set<string> = new Set<string>();
 
+	// Get unique priorities
 	const uniquePriorities = [...new Set(priorities)];
 	let filteredProjects: Project[];
+	// Get projects that match the skills filter (if any)
 	$: filteredProjects =
 		skillsFilter.size == 0
 			? data
 			: data.filter((project) => containsSkills(project, [...skillsFilter]));
+	// Sort projects by priority
 	const sortedProjects = groupProjectsByType(data);
 
 	let selectedProject: Project;
@@ -36,7 +38,7 @@
 
 <section id="projects">
 	{#if selectedProject}
-		<Modal id="project-detail-modal" title={selectedProjectTitle} bind:isOpen={isModalOpen}>
+		<Modal id="project-detail-modal" title={selectedProjectTitle} url={selectedProject.url} bind:isOpen={isModalOpen}>
 			<section slot="body">
 				<ProjectDetail data={selectedProject} id="project-detail" />
 			</section>

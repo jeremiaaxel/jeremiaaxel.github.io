@@ -8,18 +8,6 @@
 
 <section id={id} 
 	class="project bg-neutral-100 p-5 rounded-md">
-	<h1 class="text-xl font-medium relative">
-		{#if data.url}
-			<a class="link" href={data.url}>
-				{data.name}
-			</a>
-		{:else}
-			{data.name}
-		{/if}
-		{#if data.organization}
-			@ {data.organization}
-		{/if}
-	</h1>
 	<p>{data.description}</p>
 	<ol class="list-decimal list-inside flex flex-col">
 		{#each data.tasks as task}
