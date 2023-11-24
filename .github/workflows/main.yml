@@ -53,4 +53,6 @@ jobs:
         key: ${{ secrets.SECRET_KEY }}
         script: |
           export PATH=$PATH:~/.bun/bin
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
           pm2 restart ${{ secrets.PM2_NAME }}
