@@ -52,5 +52,5 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SECRET_KEY }}
         script: |
-          echo "~/.bun/bin/pm2" >> $GITHUB_PATH
+          export PATH=$PATH:~/.bun/bin
           pm2 restart ${{ secrets.PM2_NAME }}
