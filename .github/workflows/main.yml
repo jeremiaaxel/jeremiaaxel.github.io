@@ -43,7 +43,7 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SECRET_KEY }}
         source: "build,.svelte-kit,node_modules,bun.lockb,package.json"
-        target: "/projects/jeremiaaxel.github.io/"
+        target: "~/projects/jeremiaaxel.github.io/"
 
     - name: Restart PM2
       uses: appleboy/ssh-action@master
