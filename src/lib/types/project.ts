@@ -18,6 +18,7 @@ export type Project = {
 	techStacks: string[];
 	tags: string[];
 	organization?: string;
+	organizationUrl?: string;
 	url?: string;	
 }
 

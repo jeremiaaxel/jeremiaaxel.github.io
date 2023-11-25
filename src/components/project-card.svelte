@@ -16,7 +16,14 @@
 			{data.name}
 		{/if}
 		{#if data.organization}
-			@ {data.organization}
+			@
+			{#if data.organizationUrl}
+				<a class="link" href={data.organizationUrl}>
+					{data.organization}
+				</a>
+			{:else}
+				{data.organization}
+			{/if}
 		{/if}
 	</h1>
 	<p>{data.description}</p>
@@ -37,7 +44,7 @@
 		<div class="text-lg font-medium">Tag(s):</div>
 		<p class="capitalize">{formatArrays(data.tags)}</p>
 	</div>
-	<button 
+	<button
 		type="button"
 		on:click={onClick}
 		class="btn rounded-md py-1 px-2 text-neutral-600 bg-neutral-200 hover:bg-neutral-400 hover:text-neutral-100"

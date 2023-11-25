@@ -26,6 +26,7 @@
 			"type": "fulltime",
 			"name": "Software Engineer",
 			"organization": "Quantum Teknologi Nusantara",
+			"organizationUrl": "https://quantumteknologi.com",
 			"description": "Worked on several projects as both front-end and back-end developer.",
 			"tasks": [
 				{
@@ -44,6 +45,7 @@
 			"type": "internship",
 			"name": "Software Engineer Intern",
 			"organization": "Suitmedia",
+			"organizationUrl": "https://suitmedia.com/",
 			"description": "Enhanced an internal administration website made to score companies based on the items issued within the website.",
 			"tasks": [
 				{
