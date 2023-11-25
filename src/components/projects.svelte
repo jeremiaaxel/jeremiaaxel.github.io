@@ -19,7 +19,6 @@
 			: data.filter((project) => containsSkills(project, [...skillsFilter]));
 	// Sort projects by priority
 	const sortedProjects = groupProjectsByType(data);
-	console.log(priorities);
 
 	let selectedProject: Project;
 	let isModalOpen = false;
