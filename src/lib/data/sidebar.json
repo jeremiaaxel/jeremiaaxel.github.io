@@ -1,25 +1,28 @@
 {
-    "brand": {
-        "name": "Jeremia Axel",
-        "url": "",
-        "icon": "https://img.icons8.com/ios/50/user--v1.png"
-    },
-    "items": [
-        {
-            "name": "Profile",
-            "url": "#profile"
-        },
-        {
-            "name": "Skills",
-            "url": "#skills"
-        },
-        {
-            "name": "Projects",
-            "url": "#projects"
-        },
-        {
-            "name": "Technologies",
-            "url": "#technologies"
-        }
-    ]
+	"brand": {
+		"name": "Jeremia Axel",
+		"url": ""
+	},
+	"items": [
+		{
+			"name": "Profile",
+			"url": "#profile",
+			"icon": "user.svg"
+		},
+		{
+			"name": "Skills",
+			"url": "#skills",
+			"icon": "card-checklist.svg"
+		},
+		{
+			"name": "Projects",
+			"url": "#projects",
+			"icon": "briefcase.svg"
+		},
+		{
+			"name": "Technologies",
+			"url": "#technologies",
+			"icon": "cpu.svg"
+		}
+	]
 }
