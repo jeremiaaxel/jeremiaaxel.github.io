@@ -19,7 +19,7 @@
 	const projectPriorities = ['internship', 'volunteering', 'school', 'personal'];
 
 	const profile: Profile = profileJson;
-	const { projects, technologies, experiences } = dataJson;
+	const { projects, technologies, } = dataJson;
 	const { items: sidebarItems, brand } = sidebarJson;
 
 
