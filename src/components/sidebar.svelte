@@ -17,7 +17,6 @@
 
 			try {
 				const icon = new URL(`../lib/assets/${item.icon}`, import.meta.url).href;
-				console.log(icon);
 				icons.push(icon);
 			} catch (e) {
 				console.error(e);

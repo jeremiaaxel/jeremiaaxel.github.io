@@ -18,7 +18,6 @@ export function sortProjectsByPriorities(data: Project[], priorities: string[]):
 	const sortedProjects: Project[] = [];
 	priorities.forEach((priority) => {
 		if (projectsByType[priority]) {
-			console.log(...projectsByType[priority]);
 			sortedProjects.push(...projectsByType[priority]);
 		}
 	});

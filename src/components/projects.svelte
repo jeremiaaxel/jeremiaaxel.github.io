@@ -6,7 +6,7 @@
 	import ProjectDetail from './project-detail.svelte';
 
 	export let data: Project[];
-	export let priorities: string[] = ['internship', 'school', 'personal'];
+	export let priorities: string[] = ['fulltime', 'internship', 'school', 'personal'];
 	export let skillsFilter: Set<string> = new Set<string>();
 
 	// Get unique priorities
@@ -19,6 +19,7 @@
 			: data.filter((project) => containsSkills(project, [...skillsFilter]));
 	// Sort projects by priority
 	const sortedProjects = groupProjectsByType(data);
+	console.log(priorities);
 
 	let selectedProject: Project;
 	let isModalOpen = false;

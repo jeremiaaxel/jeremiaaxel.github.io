@@ -4,7 +4,12 @@
 			"type": "personal",
 			"name": "This Website",
 			"description": "The website you are seeing right now.",
+			"url": "https://jeremiaaxel.my.id",
 			"tasks": [
+				{
+					"name": "Deployment and Server Configuration",
+					"description": "Deployed this project in a Digital Ocean's droplet and configuring everything required. Also Github Actions to automate deployment."
+				},
 				{
 					"name": "Sort Projects Type",
 					"description": "Show projects ordered by priority list: internship, school, personal"
@@ -14,7 +19,7 @@
 					"description": "Skills in the Skills section are retrieved from dedicated definition of skills and tech stacks in the projects section. So I don't have to write multiple times."
 				}
 			],
-			"techStacks": ["Svelte", "Typescript", "TailwindCSS", "Git"],
+			"techStacks": ["Svelte", "Typescript", "TailwindCSS", "Git", "Digital Ocean", "Nginx", "Github Actions"],
 			"tags": ["frontend"]
 		},
 		{
@@ -29,7 +34,7 @@
 				},
 				{
 					"name": "Developed A Background Service",
-					"description": "As a part of the project, I developed a background service that checks for unprocessed data in the database and process it in another background process."
+					"description": "I developed a background service that do process an entity that includes calling third party API. Developed also a queue system for the entities to be processed."
 				}
 			],
 			"techStacks": ["Python", "PostgreSQL", "React.js","Javascript", "Typescript", "TailwindCSS", "Github Actions", "Git", "Ubuntu-based Server", "CI/CD"],

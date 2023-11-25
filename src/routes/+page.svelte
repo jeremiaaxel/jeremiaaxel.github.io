@@ -16,7 +16,7 @@
 	import NotificationComponent from '../components/notification.svelte';
 	import Sidebar from '../components/sidebar.svelte';
 
-	const projectPriorities = ['internship', 'volunteering', 'school', 'personal'];
+	const projectPriorities = ['fulltime', 'internship', 'volunteering', 'school', 'personal'];
 
 	const profile: Profile = profileJson;
 	const { projects, technologies, } = dataJson;
