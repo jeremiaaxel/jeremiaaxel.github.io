@@ -13,15 +13,17 @@
 	import ProfileComponent from '../components/profile.svelte';
 	import SkillsComponent from '../components/skills.svelte';
 	import TechnologiesComponent from '../components/technologies.svelte';
-	import NotificationComponent from '../components/notification.svelte';
-	import Sidebar from '../components/sidebar.svelte';
+	// import NotificationComponent from '../components/notification.svelte';
+	// import Sidebar from '../components/sidebar.svelte';
+	import { onMount } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
+	import { linear } from 'svelte/easing';
 
 	const projectPriorities = ['fulltime', 'internship', 'volunteering', 'school', 'personal'];
 
 	const profile: Profile = profileJson;
-	const { projects, technologies, } = dataJson;
+	const { projects, technologies } = dataJson;
 	const { items: sidebarItems, brand } = sidebarJson;
-
 
 	const skillsFromProjects: string[] = extractTechStacks(projects as Project[]);
 	const skillsFromTechnologies: string[] = extractTechnologies(technologies);
@@ -47,6 +49,21 @@
 	}
 
 	$: changedSkillsClicked(skillsClicked.latestClick, skillsClicked.values);
+
+	function scrollHandler(event: Event) {
+		const target = event.target as HTMLElement;
+		const scrollHeight = target.scrollHeight;
+		const scrollTop = target.scrollTop;
+		const clientHeight = target.clientHeight;
+		const scrollBottom = scrollHeight - scrollTop - clientHeight;
+
+		if (scrollBottom < 1) {
+			console.log('bottom');
+		}
+	}
+
+	let ready = false;
+	onMount(() => (ready = true));
 </script>
 
 <svelte:head>
@@ -57,13 +74,20 @@
 	class="flex flex-auto flex-col my-5 space-y-4
 		   md:container mx-auto
 		   md:w-3/5 w-11/12
-		   bg-neutral-200
 		   px-10 py-5 rounded-lg"
+	on:scroll={scrollHandler}
 >
-	<Sidebar brand={brand} data={sidebarItems} />
-	<NotificationComponent data={notification} />
-	<ProfileComponent data={profile} />
-	<SkillsComponent data={skills} bind:skillsClicked />
-	<ProjectsComponent data={projects} priorities={projectPriorities} bind:skillsFilter />
-	<TechnologiesComponent data={technologies} />
+	<!-- <NotificationComponent data={notification} /> -->
+	<!-- <Sidebar brand={brand} data={sidebarItems} /> -->
+	{#if ready}
+		<div transition:fade={{ duration: 500, easing: linear }}>
+			<ProfileComponent data={profile} />
+		</div>
+
+		<div transition:fly={{ delay: 400, duration: 700, easing: linear, y: 100, opacity: 0 }}>
+			<SkillsComponent data={skills} bind:skillsClicked />
+			<ProjectsComponent data={projects} priorities={projectPriorities} bind:skillsFilter />
+			<TechnologiesComponent data={technologies} />
+		</div>
+	{/if}
 </section>

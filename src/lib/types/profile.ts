@@ -11,6 +11,7 @@ type Link = {
 	name: string;
 	url: string;
 	icon?: string;
+	hoverIcon?: string;
 	iconAlt?: string;
 };
 
