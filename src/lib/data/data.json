@@ -8,18 +8,18 @@
 			"tasks": [
 				{
 					"name": "Deployment and Server Configuration",
-					"description": "Deployed this project in a Digital Ocean's droplet and configuring everything required. Also Github Actions to automate deployment."
+					"description": "Deployed this project in a Digital Ocean's droplet (now in AWS EC2) and configuring everything required. Also Github Actions to automate deployment."
 				},
 				{
 					"name": "Sort Projects Type",
-					"description": "Show projects ordered by priority list: internship, school, personal"
+					"description": "Show projects ordered by priority list: fulltime, internship, school, personal"
 				},
 				{
 					"name": "\"Dynamic\" Skills",
-					"description": "Skills in the Skills section are retrieved from dedicated definition of skills and tech stacks in the projects section. So I don't have to write multiple times."
+					"description": "Skills in the Skills section are retrieved from dedicated definition of skills and tech stacks in the projects section. The skills also could be clicked as a filter to show projects that use the skill."
 				}
 			],
-			"techStacks": ["Svelte", "Typescript", "TailwindCSS", "Git", "Digital Ocean", "Nginx", "Github Actions"],
+			"techStacks": ["Svelte", "Typescript", "TailwindCSS", "Git", "Digital Ocean", "Nginx", "Github Actions", "AWS EC2"],
 			"tags": ["frontend"]
 		},
 		{
@@ -30,12 +30,12 @@
 			"description": "Worked on several projects as both front-end and back-end developer.",
 			"tasks": [
 				{
-					"name": "Implemented Deployment Automation",
-					"description": "Using Github Actions, I implemented deployment automation for the backend and frontend of the project. The deployment automation is triggered on every push to the main branch. This automation allows the team to deploy the project without having to manually build and deploy the project."
+					"name": "Implemented Linter and/or Deployment Automation",
+					"description": "Using Github Actions, I implemented linter and/or deployment automation for the backend and frontend of the project. The automation is triggered on every push to the GitHub. This automation allows the team to make sure the code quality and deploy the project without having to manually build and deploy the project."
 				},
 				{
 					"name": "Developed A Background Service",
-					"description": "I developed a background service that do process an entity that includes calling third party API. Developed also a queue system for the entities to be processed."
+					"description": "Developed a background service to process an entity that includes calling third party API. Developed also a queue system for the entities to be processed."
 				}
 			],
 			"techStacks": ["Python", "PostgreSQL", "React.js","Javascript", "Typescript", "TailwindCSS", "Github Actions", "Git", "Ubuntu-based Server", "CI/CD"],
@@ -155,27 +155,31 @@
 	"technologies": [
 		{
 			"name": "Python",
-			"description": "Python is my programming-mother-tongue. Simple project? use python. Complex project? use python."
+			"description": "Python is my programming-mother-tongue. Since I was \"born\", I speak Python. (Obviously \"born\" as a programmer)."
+		},
+		{
+			"name": "Javascript/Typescript",
+			"description": "As Python is my Indonesian, Javascript/Typescript is my English. Not the most familiar, but confident enough to use it. Almost all non-personal-projects use Javascript/Typescript."
 		},
 		{
 			"name": "C#",
-			"description": "Is this Java or C#? I don't know. I use C# for my internship project."
+			"description": "Is this Java or C#? I don't know. Definitely love the verbosity of C#."
 		},
 		{
 			"name": "Git",
-			"description": "Git is my middle name. I use git in every project I do. Github is my best friend."
+			"description": "Git is my middle name. Git for every project. Github is my best friend. Github Actions is my best friend's best friend."
 		},
 		{
 			"name": "Docker",
-			"description": "Rarely use docker, but I know how to use it. docker compose up, docker compose down :)"
+			"description": "Installing manually is a pain. Docker is the solution. Docker is the way. Don't need the program to run? Just stop the container."
 		},
 		{
 			"name": "Linux",
-			"description": "Linux is my daily driver. My friend brought me down this rabbit hole. From Arch, to Fedora, now Pop!_OS."
+			"description": "Linux is my daily driver. My friend brought me down this rabbit hole. From Arch, to Fedora, now Pop!_OS, even my Server! But the rabbit hole is deep, I'm still learning."
 		},
 		{
 			"name": "SQL",
-			"description": "SELECT money FROM wallet WHERE name='Jeremia'; money 0.00. Gib job pls."
+			"description": "SELECT currency, money FROM wallet WHERE name='Jeremia'; IDR \"not much\". Now I want to change the currency. Looking for a job abroad."
 		}
 	]
 }
