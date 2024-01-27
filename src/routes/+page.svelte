@@ -68,8 +68,8 @@
 
 <svelte:head>
 	<title>Jeremia Axel's Portofolio Web</title>
-	<meta name="description" content="Jeremia Axel's Portofolio Web to show projects and/or experiences." />
-	<link rel="icon" href="" />
+	<meta content="Jeremia Axel's Portofolio Web to show projects and/or experiences." name="description" />
+	<link href="" rel="icon" />
 </svelte:head>
 
 <section
@@ -87,9 +87,15 @@
 		</div>
 
 		<div transition:fly={{ delay: 400, duration: 700, easing: linear, y: 100, opacity: 0 }}>
-			<SkillsComponent data={skills} bind:skillsClicked />
-			<ProjectsComponent data={projects} priorities={projectPriorities} bind:skillsFilter />
-			<TechnologiesComponent data={technologies} />
+			<div class="mt-8">
+				<SkillsComponent data={skills} bind:skillsClicked />
+			</div>
+			<div class="mt-8">
+				<ProjectsComponent data={projects} priorities={projectPriorities} bind:skillsFilter />
+			</div>
+			<div class="mt-8">
+				<TechnologiesComponent data={technologies} />
+			</div>
 		</div>
 	{/if}
 </section>
