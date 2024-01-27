@@ -68,6 +68,8 @@
 
 <svelte:head>
 	<title>Jeremia Axel's Portofolio Web</title>
+	<meta name="description" content="Jeremia Axel's Portofolio Web to show projects and/or experiences." />
+	<link rel="icon" href="" />
 </svelte:head>
 
 <section
