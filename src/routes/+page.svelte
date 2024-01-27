@@ -19,7 +19,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { linear } from 'svelte/easing';
 
-	const projectPriorities = ['fulltime', 'internship', 'volunteering', 'school', 'personal'];
+	const projectPriorities = ['fulltime', 'freelance', 'personal', 'internship', 'volunteering', 'school'];
 
 	const profile: Profile = profileJson;
 	const { projects, technologies } = dataJson;
