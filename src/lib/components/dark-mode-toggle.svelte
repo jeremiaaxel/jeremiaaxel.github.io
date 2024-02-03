@@ -12,9 +12,8 @@
 		toast(`Switched to ${$mode === 'dark' ? 'dark' : 'light'} mode`, {
 			icon: $mode === 'dark' ? Moon : Sun
 		});
+    window.umami.track("Dark Mode Toggle", { mode: $mode === 'dark' ? 'dark' : 'light'});
 	}}
-	data-umami-event="Dark Mode Toggle"
-	data-umami-event-mode={$mode === 'dark' ? 'dark' : 'light'}
 >
 	{#if $mode === 'dark'}
 		<Moon class="h-[1.2rem] w-[1.2rem] transition-all" />
