@@ -73,7 +73,6 @@
 <section
 	class="flex flex-auto flex-col my-5 space-y-4
 		   md:container mx-auto
-		   md:w-3/5 w-11/12
 		   px-10 py-5 rounded-lg"
 	on:scroll={scrollHandler}
 >
@@ -84,10 +83,17 @@
 			<ProfileComponent data={profile} />
 		</div>
 
-		<div transition:fly={{ delay: 400, duration: 700, easing: linear, y: 100, opacity: 0 }}>
-			<SkillsComponent data={skills} bind:skillsClicked />
-			<ProjectsComponent data={projects} priorities={projectPriorities} bind:skillsFilter />
-			<TechnologiesComponent data={technologies} />
+		<div
+			transition:fly={{ delay: 400, duration: 700, easing: linear, y: 100, opacity: 0 }}
+			class="flex flex-col md:flex-row-reverse gap-5"
+		>
+			<section id="sidebar" class="md:w-3/12 md:sticky md:top-0 h-fit">
+				<SkillsComponent data={skills} bind:skillsClicked />
+			</section>
+			<section id="main-content" class="md:w-9/12">
+				<ProjectsComponent data={projects} priorities={projectPriorities} bind:skillsFilter />
+				<TechnologiesComponent data={technologies} />
+			</section>
 		</div>
 	{/if}
 </section>

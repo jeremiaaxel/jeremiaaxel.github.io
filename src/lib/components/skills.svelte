@@ -1,5 +1,5 @@
 <script lang="ts">
-		import NotificationComponent from '../components/notification.svelte';
+	import NotificationComponent from '../components/notification.svelte';
 
 	export let data: string[];
 	export let skillsClicked = {
@@ -23,7 +23,7 @@
 
 <section id="skills">
 	<h3 class="text-2xl">Skills</h3>
-	<NotificationComponent data={notification} type='banner' />
+	<NotificationComponent data={notification} type="banner" />
 	{#each data as skill, skillIdx}
 		<button
 			on:click={() => updateSkillsClicked(skillIdx)}
