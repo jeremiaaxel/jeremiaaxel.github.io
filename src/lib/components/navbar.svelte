@@ -26,7 +26,7 @@
 			</Menubar.Content>
 		</Menubar.Menu>
 		<Menubar.Menu>
-			<Menubar.Trigger class="bg-slate-50 whitespace-nowrap">
+			<Menubar.Trigger class="bg-slate-50 dark:bg-gray-900 whitespace-nowrap">
 				<a href="https://moneybackward.jeremiaaxel.my.id" target="_blank">
 					Money Backward
 					<Badge class="ml-1 bg-gray-400 text-white outline-none">New</Badge>

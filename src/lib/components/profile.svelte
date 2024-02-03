@@ -24,7 +24,7 @@
 		<section class="links flex flex-row justify-center">
 			{#each data.links as link, idx (idx)}
 				<a
-					class="p-2 mx-1 link rounded-md hover:scale-125 transition-transform bg-neutral-50 hover:bg-neutral-200"
+					class="p-2 mx-1 link rounded-md hover:scale-125 transition-transform bg-neutral-50 hover:bg-neutral-200 dark:bg-neutral-950 dark:hover:bg-neutral-800"
 					href={link.url}
 					target="_blank"
 					title={link.name}

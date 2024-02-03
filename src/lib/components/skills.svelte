@@ -33,7 +33,7 @@
 				<Button
 					variant="outline"
 					on:click={() => updateSkillsClicked(skillIdx)}
-					class="rounded px-2 py-1 {skillsClicked.values.has(skillIdx) ? 'bg-gray-300' : ''}"
+					class="rounded px-2 py-1 {skillsClicked.values.has(skillIdx) ? 'bg-gray-300 dark:bg-gray-700' : ''}"
 					>{skill}
 				</Button>
 			{/each}
