@@ -20,7 +20,7 @@
 >
 	<div>
 		<h1 class="text-7xl">{data.name}</h1>
-		<p class="text-lg">{data.description}</p>
+		<p class="text-lg whitespace-pre-line">{data.description}</p>
 		<section class="links flex flex-row justify-center">
 			{#each data.links as link, idx (idx)}
 				<a

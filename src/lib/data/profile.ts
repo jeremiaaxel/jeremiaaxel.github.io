@@ -8,7 +8,7 @@ import {
 
 const data: Profile = {
 	"name": "Jeremia Axel",
-	"description": "Software Engineer (Backend)",
+	"description": "Software Engineer. I love to learn new things.\nLooking for the opportunity to work with a great team and awesome technologies!",
 	"links": [
 		{
 			"name": "email",

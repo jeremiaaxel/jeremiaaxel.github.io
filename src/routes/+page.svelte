@@ -101,7 +101,7 @@
 			</section>
 			<section id="main-content" class="md:w-9/12">
 				<ProjectsComponent bind:data={filteredProjects} priorities={projectPriorities} />
-				<TechnologiesComponent data={technologies} />
+				<!-- <TechnologiesComponent data={technologies} /> -->
 			</section>
 		</div>
 	{/if}
