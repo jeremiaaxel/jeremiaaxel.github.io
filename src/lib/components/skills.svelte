@@ -1,5 +1,6 @@
 <script lang="ts">
-		import NotificationComponent from '../components/notification.svelte';
+	import NotificationComponent from '../components/notification.svelte';
+	import { Button } from '$lib/components/ui/button';
 
 	export let data: string[];
 	export let skillsClicked = {
@@ -23,13 +24,15 @@
 
 <section id="skills">
 	<h3 class="text-2xl">Skills</h3>
-	<NotificationComponent data={notification} type='banner' />
-	{#each data as skill, skillIdx}
-		<button
-			on:click={() => updateSkillsClicked(skillIdx)}
-			class="mx-2 rounded-full px-2 py-1 hover:bg-blue-300 {skillsClicked.values.has(skillIdx)
-				? 'bg-blue-400'
-				: 'bg-blue-200'}">{skill}</button
-		>
-	{/each}
+	<NotificationComponent data={notification} type="banner" />
+	<section class="flex gap-1 flex-wrap">
+		{#each data as skill, skillIdx}
+			<Button
+				variant="outline"
+				on:click={() => updateSkillsClicked(skillIdx)}
+				class="rounded px-2 py-1 {skillsClicked.values.has(skillIdx) ? 'bg-gray-300' : ''}"
+				>{skill}
+			</Button>
+		{/each}
+	</section>
 </section>
