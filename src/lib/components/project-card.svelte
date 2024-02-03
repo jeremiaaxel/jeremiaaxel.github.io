@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { Project } from '$lib/types/project';
-	import { formatArrays } from '$lib/utils/formatting';
 	import * as Card from '$lib/components/ui/card';
 	import * as Accordion from '$lib/components/ui/accordion';
+	import * as Dialog from '$lib/components/ui/dialog';
+	import { buttonVariants } from "$lib/components/ui/button";
 	import { Badge } from '$lib/components/ui/badge';
 
 	export let data: Project;
-	export let onClick: () => void;
 </script>
 
 <Card.Root>
@@ -62,4 +62,59 @@
 			{/each}
 		</div>
 	</Card.Content>
+	<Card.Footer>
+		<Dialog.Root>
+			<Dialog.Trigger class={buttonVariants({ variant: 'outline' })}>See full</Dialog.Trigger>
+			<Dialog.Content class="overflow-y-scroll max-h-screen">
+				<Dialog.Header>
+					<Dialog.Title>
+						{#if data.url}
+							<a class="link" href={data.url}>
+								{data.name}
+							</a>
+						{:else}
+							{data.name}
+						{/if}
+						{#if data.organization}
+							@
+							{#if data.organizationUrl}
+								<a class="link" href={data.organizationUrl}>
+									{data.organization}
+								</a>
+							{:else}
+								{data.organization}
+							{/if}
+						{/if}
+					</Dialog.Title>
+					<Dialog.Description>
+						{data.description}
+					</Dialog.Description>
+				</Dialog.Header>
+				<div class="flex flex-col gap-4">
+					<ol class="list-decimal list-inside flex flex-col gap-2">
+						{#each data.tasks as task}
+							<li>
+								<span class="font-medium">{task.name}</span>
+								<p class="text-sm">{task.description}</p>
+							</li>
+						{/each}
+					</ol>
+					<div class="tech-stack">
+						<div class="font-medium">Tech Stack(s):</div>
+						{#each data.techStacks.sort((a, b) => a
+								.toLowerCase()
+								.localeCompare(b.toLowerCase())) as thisTechStack}
+							<Badge variant="outline">{thisTechStack}</Badge>
+						{/each}
+					</div>
+					<div class="tags">
+						<div class="font-medium">Tag(s):</div>
+						{#each data.tags as tag}
+							<Badge variant="outline" class="capitalize">{tag}</Badge>
+						{/each}
+					</div>
+				</div>
+			</Dialog.Content>
+		</Dialog.Root>
+	</Card.Footer>
 </Card.Root>
