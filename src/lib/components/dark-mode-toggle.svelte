@@ -1,11 +1,16 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
+  import { toast } from "svelte-sonner";
 	import { Sun, Moon } from 'lucide-svelte';
 
 	import { toggleMode, mode } from 'mode-watcher';
 </script>
 
-<button type="button" on:click={toggleMode}>
+<button type="button" on:click={() => {
+  toggleMode();
+  toast(`Switched to ${$mode === 'dark' ? 'dark' : 'light'} mode`, {
+    icon: $mode === 'dark' ? Moon : Sun,
+  });
+}}>
   {#if $mode === 'dark'}
     <Moon class="h-[1.2rem] w-[1.2rem] transition-all" />
   {:else}
