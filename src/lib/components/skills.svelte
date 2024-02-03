@@ -2,7 +2,7 @@
 	import NotificationComponent from '../components/notification.svelte';
 	import { Info } from 'lucide-svelte';
 	import { Button } from '$lib/components/ui/button';
-  import { toast } from "svelte-sonner";
+	import { toast } from 'svelte-sonner';
 
 	export let data: string[];
 	export let skillsClicked = {
@@ -35,10 +35,18 @@
 					variant="outline"
 					on:click={() => {
 						updateSkillsClicked(skillIdx);
-						toast(`${skillsClicked.values.has(skillIdx) ? 'Added' : 'Removed'} "${skill}" skill filter`);
+						toast(
+							`${skillsClicked.values.has(skillIdx) ? 'Added' : 'Removed'} "${skill}" skill filter`
+						);
 					}}
-					class="rounded px-2 py-1 {skillsClicked.values.has(skillIdx) ? 'bg-gray-300 dark:bg-gray-700' : ''}"
-					>{skill}
+					class="rounded px-2 py-1 {skillsClicked.values.has(skillIdx)
+						? 'bg-gray-300 dark:bg-gray-700'
+						: ''}"
+					data-umami-event="Skills Filter"
+					data-umami-event-skill={`${skill}-${!skillsClicked.values.has(skillIdx) ? 'added' : 'removed'}`}
+				>
+					<!-- Tracker: if skill previously not exist, added, else removed -->
+					{skill}
 				</Button>
 			{/each}
 		</section>

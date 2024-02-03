@@ -28,6 +28,8 @@
 					href={link.url}
 					target="_blank"
 					title={link.name}
+					data-umami-event="Profile Link Clicked"
+					data-umami-event-profile-link={link.name}
 				>
 					{#if link.icon}
 						<svelte:component this={link.icon} />

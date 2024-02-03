@@ -3,7 +3,7 @@
 	import * as Card from '$lib/components/ui/card';
 	import * as Accordion from '$lib/components/ui/accordion';
 	import * as Dialog from '$lib/components/ui/dialog';
-	import { buttonVariants } from "$lib/components/ui/button";
+	import { buttonVariants } from '$lib/components/ui/button';
 	import { Badge } from '$lib/components/ui/badge';
 
 	export let data: Project;
@@ -38,7 +38,10 @@
 		<Accordion.Root class="list-decimal list-inside flex flex-col">
 			{#each data.tasks as task}
 				<Accordion.Item value={task.name}>
-					<Accordion.Trigger>
+					<Accordion.Trigger
+						data-umami-event="Project Card Task"
+						data-umami-event-project-task={`${data.name}-${task.name}`}
+					>
 						{task.name}
 					</Accordion.Trigger>
 					<Accordion.Content>
@@ -64,7 +67,13 @@
 	</Card.Content>
 	<Card.Footer>
 		<Dialog.Root>
-			<Dialog.Trigger class={buttonVariants({ variant: 'outline' })}>See full</Dialog.Trigger>
+			<Dialog.Trigger
+				class={buttonVariants({ variant: 'outline' })}
+				data-umami-event="Project Card See Full"
+				data-umami-event-project={data.name}
+			>
+				See full
+			</Dialog.Trigger>
 			<Dialog.Content class="overflow-y-scroll max-h-screen">
 				<Dialog.Header>
 					<Dialog.Title>
