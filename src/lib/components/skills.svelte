@@ -2,6 +2,7 @@
 	import NotificationComponent from '../components/notification.svelte';
 	import { Info } from 'lucide-svelte';
 	import { Button } from '$lib/components/ui/button';
+  import { toast } from "svelte-sonner";
 
 	export let data: string[];
 	export let skillsClicked = {
@@ -32,7 +33,10 @@
 			{#each data as skill, skillIdx}
 				<Button
 					variant="outline"
-					on:click={() => updateSkillsClicked(skillIdx)}
+					on:click={() => {
+						updateSkillsClicked(skillIdx);
+						toast(`${skillsClicked.values.has(skillIdx) ? 'Added' : 'Removed'} "${skill}" skill filter`);
+					}}
 					class="rounded px-2 py-1 {skillsClicked.values.has(skillIdx) ? 'bg-gray-300 dark:bg-gray-700' : ''}"
 					>{skill}
 				</Button>
