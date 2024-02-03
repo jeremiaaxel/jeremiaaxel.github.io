@@ -59,7 +59,7 @@
 					"description": "Skills in the Skills section are retrieved from dedicated definition of skills and tech stacks in the projects section. The skills also could be clicked as a filter to show projects that use the skill."
 				}
 			],
-			"techStacks": ["Svelte", "Typescript", "TailwindCSS", "Git", "Digital Ocean", "Nginx", "Github Actions", "AWS EC2"],
+			"techStacks": ["Svelte", "Typescript", "TailwindCSS", "Shadcn", "Git", "Digital Ocean", "Nginx", "Github Actions", "AWS EC2"],
 			"tags": ["frontend"]
 		},
 		{
