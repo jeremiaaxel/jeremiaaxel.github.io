@@ -2,10 +2,11 @@
 	import * as Menubar from '$lib/components/ui/menubar';
 	import Profile from '$lib/data/profile';
 	import { Badge } from '$lib/components/ui/badge';
+	import DarkModeToggle from './dark-mode-toggle.svelte';
 </script>
 
 <section>
-	<Menubar.Root>
+	<Menubar.Root class="w-full">
 		<Menubar.Menu>
 			<Menubar.Trigger>
 				<a href="/">Home</a>
@@ -30,7 +31,12 @@
 					Money Backward
 					<Badge class="ml-1 bg-gray-400 text-white outline-none">New</Badge>
 				</a>
-      </Menubar.Trigger>
+			</Menubar.Trigger>
+		</Menubar.Menu>
+		<Menubar.Menu>
+			<Menubar.Trigger class="cursor-pointer !ml-auto !bg-opacity-0">
+				<DarkModeToggle />
+			</Menubar.Trigger>
 		</Menubar.Menu>
 	</Menubar.Root>
 </section>

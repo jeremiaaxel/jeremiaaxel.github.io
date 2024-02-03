@@ -68,8 +68,7 @@
 	<link href="" rel="icon" />
 </svelte:head>
 
-<section
->
+<section class="dark:bg-black">
 	<NavbarComponent />
 	<section
 		class="flex flex-auto flex-col my-5 space-y-4
