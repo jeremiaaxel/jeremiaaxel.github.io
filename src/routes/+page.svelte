@@ -9,10 +9,10 @@
 	import { extractTechStacks } from '$lib/utils/projects';
 	import { extractTechnologies } from '$lib/utils/technologies';
 
-	import ProjectsComponent from '../components/projects.svelte';
-	import ProfileComponent from '../components/profile.svelte';
-	import SkillsComponent from '../components/skills.svelte';
-	import TechnologiesComponent from '../components/technologies.svelte';
+	import ProjectsComponent from '$lib/components/projects.svelte';
+	import ProfileComponent from '$lib/components/profile.svelte';
+	import SkillsComponent from '$lib/components/skills.svelte';
+	import TechnologiesComponent from '$lib/components/technologies.svelte';
 	// import NotificationComponent from '../components/notification.svelte';
 	// import Sidebar from '../components/sidebar.svelte';
 	import { onMount } from 'svelte';
