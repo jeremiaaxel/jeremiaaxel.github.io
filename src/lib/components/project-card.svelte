@@ -2,6 +2,8 @@
 	import type { Project } from '$lib/types/project';
 	import { formatArrays } from '$lib/utils/formatting';
 	import * as Card from '$lib/components/ui/card';
+	import * as Accordion from '$lib/components/ui/accordion';
+	import { Badge } from '$lib/components/ui/badge';
 
 	export let data: Project;
 	export let onClick: () => void;
@@ -32,34 +34,32 @@
 			{data.description}
 		</Card.Description>
 	</Card.Header>
-	<Card.Content>
-		<ol class="list-decimal list-inside flex flex-col">
+	<Card.Content class="flex flex-col gap-4">
+		<Accordion.Root class="list-decimal list-inside flex flex-col">
 			{#each data.tasks as task}
-				<li class="">
-					<p class="task-name inline">{task.name}</p>
-				</li>
+				<Accordion.Item value={task.name}>
+					<Accordion.Trigger>
+						{task.name}
+					</Accordion.Trigger>
+					<Accordion.Content>
+						{task.description}
+					</Accordion.Content>
+				</Accordion.Item>
 			{/each}
-		</ol>
+		</Accordion.Root>
 		<div class="tech-stack">
 			<div class="font-medium">Tech Stack(s):</div>
-			<p>
-				{formatArrays(
-					data.techStacks.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
-				)}
-			</p>
+			{#each data.techStacks.sort((a, b) => a
+					.toLowerCase()
+					.localeCompare(b.toLowerCase())) as thisTechStack}
+				<Badge variant="outline">{thisTechStack}</Badge>
+			{/each}
 		</div>
 		<div class="tags">
 			<div class="font-medium">Tag(s):</div>
-			<p class="capitalize">{formatArrays(data.tags)}</p>
+			{#each data.tags as tag}
+				<Badge variant="outline" class="capitalize">{tag}</Badge>
+			{/each}
 		</div>
 	</Card.Content>
-	<Card.Footer>
-		<button
-			type="button"
-			on:click={onClick}
-			class="btn rounded-md py-1 px-2 text-neutral-600 bg-neutral-200 hover:bg-neutral-400 hover:text-neutral-100"
-		>
-			Learn more
-		</button>
-	</Card.Footer>
 </Card.Root>
