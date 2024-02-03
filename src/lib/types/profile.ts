@@ -7,11 +7,13 @@
  * - Social media links
  */
 
+import type { ComponentType } from 'svelte';
+import type { Icon } from 'lucide-svelte';
+
 type Link = {
 	name: string;
 	url: string;
-	icon?: string;
-	hoverIcon?: string;
+	icon?: ComponentType<Icon>;
 	iconAlt?: string;
 };
 

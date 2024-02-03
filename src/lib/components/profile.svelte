@@ -3,12 +3,6 @@
 	import { afterUpdate } from 'svelte';
 
 	export let data: Profile;
-	data.links.forEach((link) => {
-		if (link.icon) {
-			let lastSlash = link.icon.lastIndexOf('/');
-			link.iconAlt = link.icon.substring(lastSlash + 1);
-		}
-	});
 
 	let profileSection: HTMLElement;
 	afterUpdate(() => {
@@ -17,17 +11,6 @@
 		}
 		console.log(profileSection.offsetTop);
 	});
-	let linksStyles: boolean[] = [];
-	for (const link of data.links) {
-		linksStyles.push(false);
-	}
-
-	function onHover(idx: number) {
-		linksStyles[idx] = true;
-	}
-	function onUnhover(idx: number) {
-		linksStyles[idx] = false;
-	}
 </script>
 
 <section
@@ -45,21 +28,9 @@
 					href={link.url}
 					target="_blank"
 					title={link.name}
-					on:mouseover={() => {
-						onHover(idx);
-					}}
-					on:focus={() => {}}
-					on:mouseout={() => {
-						onUnhover(idx);
-					}}
-					on:blur={() => {}}
 				>
 					{#if link.icon}
-						{#if link.hoverIcon && linksStyles[idx]}
-							<img width="25" height="25" src={link.hoverIcon} alt={link.iconAlt} />
-						{:else}
-							<img width="25" height="25" src={link.icon} alt={link.iconAlt} />
-						{/if}
+						<svelte:component this={link.icon} />
 					{:else}
 						{link.name}
 					{/if}

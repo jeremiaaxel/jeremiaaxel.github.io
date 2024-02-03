@@ -3,7 +3,7 @@
 	import type { Profile } from '$lib/types/profile';
 
 	import dataJson from '$lib/data/data.json';
-	import profileJson from '$lib/data/profile.json';
+	import profileJson from '$lib/data/profile';
 	import sidebarJson from '$lib/data/sidebar.json';
 
 	import { containsSkills, extractTechStacks } from '$lib/utils/projects';
