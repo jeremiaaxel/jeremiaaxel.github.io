@@ -15,7 +15,7 @@
 
 <section
 	id="profile"
-	class="flex flex-col h-[85vh] justify-center items-center text-center"
+	class="flex flex-col h-[78vh] justify-center items-center text-center"
 	bind:this={profileSection}
 >
 	<div>
