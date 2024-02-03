@@ -6,7 +6,7 @@
 	import profileJson from '$lib/data/profile.json';
 	import sidebarJson from '$lib/data/sidebar.json';
 
-	import { extractTechStacks } from '$lib/utils/projects';
+	import { containsSkills, extractTechStacks } from '$lib/utils/projects';
 	import { extractTechnologies } from '$lib/utils/technologies';
 
 	import ProjectsComponent from '$lib/components/projects.svelte';
@@ -49,6 +49,13 @@
 	}
 
 	$: changedSkillsClicked(skillsClicked.latestClick, skillsClicked.values);
+
+	let filteredProjects: Project[];
+	// Get projects that match the skills filter (if any)
+	$: filteredProjects =
+		skillsFilter.size == 0
+			? projects
+			: projects.filter((project) => containsSkills(project, [...skillsFilter]));
 
 	function scrollHandler(event: Event) {
 		const target = event.target as HTMLElement;
@@ -93,7 +100,7 @@
 				<SkillsComponent data={skills} bind:skillsClicked />
 			</section>
 			<section id="main-content" class="md:w-9/12">
-				<ProjectsComponent data={projects} priorities={projectPriorities} bind:skillsFilter />
+				<ProjectsComponent bind:data={filteredProjects} priorities={projectPriorities} />
 				<TechnologiesComponent data={technologies} />
 			</section>
 		</div>
