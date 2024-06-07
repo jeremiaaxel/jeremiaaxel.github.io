@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+env:
+  SERVER_CWD: ~/projects/jeremiaaxel.github.io/
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,7 +15,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout the repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Check SSH
       uses: appleboy/ssh-action@master
@@ -36,14 +39,28 @@ jobs:
       run:
         bun run build
 
+    - name: Zip artifact for deployment
+      run: zip -rq release.zip ./* .svelte-kit
+
     - name: Copy to server
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SECRET_KEY }}
-        source: "build,.svelte-kit,node_modules,bun.lockb,package.json"
-        target: "~/projects/jeremiaaxel.github.io/"
+        source: release.zip
+        target: ${{ env.SERVER_CWD }}
+
+    - name: Unzip Artifacts and Remove Zip
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.SECRET_KEY }}
+        script: |
+          cd ${{ env.SERVER_CWD }}
+          unzip -oq release.zip
+          rm release.zip
 
     - name: Restart PM2
       uses: appleboy/ssh-action@master
@@ -52,7 +69,8 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SECRET_KEY }}
         script: |
+          cd ${{ env.SERVER_CWD }}
           export PATH=$PATH:~/.bun/bin
           export NVM_DIR=~/.nvm
           source ~/.nvm/nvm.sh
-          pm2 restart ${{ secrets.PM2_NAME }}
+          pm2 startOrRestart ecosystem.config.cjs
