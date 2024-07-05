@@ -1,28 +1,28 @@
 {
-	"brand": {
-		"name": "Jeremia Axel",
-		"url": ""
-	},
-	"items": [
-		{
-			"name": "Profile",
-			"url": "#profile",
-			"icon": "user.svg"
-		},
-		{
-			"name": "Skills",
-			"url": "#skills",
-			"icon": "card-checklist.svg"
-		},
-		{
-			"name": "Projects",
-			"url": "#projects",
-			"icon": "briefcase.svg"
-		},
-		{
-			"name": "Technologies",
-			"url": "#technologies",
-			"icon": "cpu.svg"
-		}
-	]
+  "brand": {
+    "name": "Jeremia Axel",
+    "url": ""
+  },
+  "items": [
+    {
+      "name": "Profile",
+      "url": "#profile",
+      "icon": "user.svg"
+    },
+    {
+      "name": "Skills",
+      "url": "#skills",
+      "icon": "card-checklist.svg"
+    },
+    {
+      "name": "Projects",
+      "url": "#projects",
+      "icon": "briefcase.svg"
+    },
+    {
+      "name": "Technologies",
+      "url": "#technologies",
+      "icon": "cpu.svg"
+    }
+  ]
 }

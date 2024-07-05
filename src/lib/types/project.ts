@@ -11,18 +11,17 @@
 import type { Task } from './task';
 
 export type Project = {
-	type: string;
-	name: string;
-	description: string;
-	tasks: Task[];
-	techStacks: string[];
-	tags: string[];
-	organization?: string;
-	organizationUrl?: string;
-	url?: string;	
-}
-
-export type ProjectsByType = {
-	[key: string]: Project[];
+  type: string;
+  name: string;
+  description: string;
+  tasks: Task[];
+  techStacks: string[];
+  tags: string[];
+  organization?: string;
+  organizationUrl?: string;
+  url?: string;
 };
 
+export type ProjectsByType = {
+  [key: string]: Project[];
+};

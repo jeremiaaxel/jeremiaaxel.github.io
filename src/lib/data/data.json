@@ -1,298 +1,298 @@
 {
-	"projects": [
-		{
-			"type": "freelance",
-			"name": "Ebony Hotel Website (Frontend)",
-			"description": "A hotel website to showcase the hotel and its facilities, and also to allow the user to book a room.",
-			"url": "https://hotel-ebony-batulicin-fe.vercel.app/",
-			"tasks": [
-				{
-					"name": "Developed From Scratch: Leader & Reusability",
-					"description": "Developed the frontend from scratch using Nuxt3 and TailwindCSS. Developed by a team of 2, and act as the leader. Developed by separating the website into components for reusability."
-				},
-				{
-					"name": "Developed Booking System",
-					"description": "Developed room selection and user form to book a room and send the data to the backend."
-				}
-			],
-			"techStacks": ["Nuxt 3", "Vue3", "Typescript", "TailwindCSS", "Git"],
-			"tags": ["frontend"]
-		},
-		{
-			"type": "personal",
-			"name": "Money Backward",
-			"description": "An expense tracker to track you expenses and income.",
-			"url": "https://moneybackward.jeremiaaxel.my.id",
-			"tasks": [
-				{
-					"name": "OCR to extract amount from camera",
-					"description": "Inputing amount manually every time is a pain, especially currencies with lots of zeroes like Rupiah (IDR). Implemented OCR to extract amount from camera and input it to the amount field."
-				},
-				{
-					"name": "Graph to help visualize the incomes/expenses",
-					"description": "Use the graph to see the usage of your money, budget, and incomes."
-				},
-				{
-					"name": "OpenAPI for API Documentation",
-					"description": "APIs are documented using OpenAPI and generated using Go-Swagger."
-				}
-			],
-			"techStacks": [
-				"Quasar",
-				"Vue",
-				"Typescript",
-				"Git",
-				"Gin",
-				"Golang",
-				"GORM",
-				"PostgreSQL",
-				"Nginx",
-				"Github Actions",
-				"AWS EC2",
-				"OpenAPI"
-			],
-			"tags": ["fullstack", "backend", "frontend", "personal"]
-		},
-		{
-			"type": "personal",
-			"name": "This Website",
-			"description": "The website you are seeing right now.",
-			"url": "https://jeremiaaxel.my.id",
-			"tasks": [
-				{
-					"name": "Deployment and Server Configuration",
-					"description": "Deployed this project in a Digital Ocean's droplet (now in AWS EC2) and configuring everything required. Also Github Actions to automate deployment."
-				},
-				{
-					"name": "Implement Self-Hosted Tracker",
-					"description": "Implemented a tracker to track the user's interaction with the website using self-hosted Umami. No personal data is collected."
-				},
-				{
-					"name": "Sort Projects Type",
-					"description": "Show projects ordered by priority list: fulltime, internship, school, personal"
-				},
-				{
-					"name": "\"Dynamic\" Skills",
-					"description": "Skills in the Skills section are retrieved from dedicated definition of skills and tech stacks in the projects section. The skills also could be clicked as a filter to show projects that use the skill."
-				}
-			],
-			"techStacks": [
-				"Svelte",
-				"Typescript",
-				"TailwindCSS",
-				"Shadcn",
-				"Git",
-				"Digital Ocean",
-				"Nginx",
-				"Github Actions",
-				"AWS EC2"
-			],
-			"tags": ["frontend"]
-		},
-		{
-			"type": "fulltime",
-			"name": "Software Engineer",
-			"organization": "Quantum Teknologi Nusantara",
-			"organizationUrl": "https://quantumteknologi.com",
-			"description": "Handled various projects using various tech stack ranging from web app, desktop app, to internal utility app.",
-			"tasks": [
-				{
-					"name": "Take the initiative to implement CI/CD",
-					"description": "To automate deployment to server, I implemented CI/CD using Github Action which then adopted in other projects as well. The automation is triggered on every push to main branch in the GitHub."
-				},
-				{
-					"name": "Serve as the sole web developer for a generative AI web application",
-					"description": "Served as the sole developer, working with AI team's code, third party APIs, and US-based client's existing web application."
-				},
-				{
-					"name": "Develop a worker-server web scraper",
-					"description": "Developed a web scraper that uses worker-server architecture to distribute and manage the scraping process on multiple local machines, and integrated with other existing web applications. Developed by a team of two, and working collaboratively."
-				}
-			],
-			"techStacks": [
-				"FastAPI",
-				"Python",
-				"PostgreSQL",
-				"Redis",
-				"MariaDB",
-				"Next.js",
-				"React.js",
-				"Javascript",
-				"Typescript",
-				"TailwindCSS",
-				"Github Actions",
-				"Git",
-				"Ubuntu-based Server",
-				"CI/CD",
-				"Gin",
-				"Golang",
-				"GORM",
-				"OpenAPI"
-			],
-			"tags": ["fullstack", "backend", "orchestrator", "collaboration"]
-		},
-		{
-			"type": "internship",
-			"name": "Software Engineer Intern",
-			"organization": "Suitmedia",
-			"organizationUrl": "https://suitmedia.com/",
-			"description": "Enhanced an internal administration website made to score companies based on the items issued within the website.",
-			"tasks": [
-				{
-					"name": "Upgraded Role Based Access Control",
-					"description": "Upgraded role based access control from 2 roles into 5 roles with each specialized permissions (e.g. role that only able to issue item but not edit, role that only able to edit, role that can do both)."
-				},
-				{
-					"name": "Developed Item Approval System",
-					"description": "Developed two-tier item approval system: \"to be approved\", and \"approved\" or \"rejected\". Only approved items are calculated in the scoring."
-				},
-				{
-					"name": "Updated The Scoring Calculation",
-					"description": "Each item has different score and multiplier based on the category and sub-category. And the multiplier used also different if there is any item in certain categories. Yes, it's complicated!"
-				},
-				{
-					"name": "Refactored Some Part of the Code Base",
-					"description": "Maintainability is important! Refactored some of the functions and classes for the better maintainability, such as extracting repeatable logics into functions or putting constant items into list for easier change/scalability."
-				}
-			],
-			"techStacks": [
-				".NET",
-				"Microsoft SQL",
-				"Vue.js",
-				"Javascript",
-				"jQuery",
-				"Bootstrap",
-				"Git",
-				"C#"
-			],
-			"tags": ["fullstack", "backend"]
-		},
-		{
-			"type": "volunteering",
-			"name": "Frontend Developer/Vice Head of Website Division",
-			"organization": "Wisuda Juli 2021",
-			"description": "Developed a website made to appreciate the ITB's July 2021 graduates.",
-			"tasks": [
-				{
-					"name": "Organize Frontend Team",
-					"description": "Organized a team of five for the frontend part from developing the UI/UX to develop the website."
-				},
-				{
-					"name": "Message for The Graduates",
-					"description": "Developed a one-direction messaging frontend for the public to give message to the graduates."
-				},
-				{
-					"name": "Initialized The Frontend Codebase",
-					"description": "Set up custom scaffolding for the codebase, although never used React and Typescript before."
-				}
-			],
-			"techStacks": ["React.js", "Sass", "Typescript", "Git"],
-			"tags": ["frontend", "manager"]
-		},
-		{
-			"type": "volunteering",
-			"name": "StatsBot",
-			"url": "https://github.com/thieleju/statsbot/pull/15",
-			"description": "A Discord bot that shows statistics to a Discord server. A contribution to open source project as part of Hacktoberfest 2022.",
-			"tasks": [
-				{
-					"name": "Show Chess Leaderboard",
-					"description": "Develop a feature to show the chess leaderboard by fetching chess.com's API and format the data."
-				}
-			],
-			"techStacks": ["Discord.js", "Javascript", "Git"],
-			"tags": ["open source contributor"]
-		},
-		{
-			"type": "school",
-			"name": "Development of Testing Module for Autonomous Tram Simulation Using CARLA Simulator",
-			"description": "A final project to develop a testing module for an autonomous tram simulation using CARLA Simulator.",
-			"tasks": [
-				{
-					"name": "Developed Various Testing Scenarios",
-					"description": "Developed several testing scenarios such as time scenarios, weather scenarios, traffic scenarios, and specialized scenarios."
-				},
-				{
-					"name": "Developed Tram Control Agent",
-					"description": "Developed a tram control interface on top of CARLA's car control; enables control with only throttle and brake. Developed also an agent that enables receiving control from another computer (using ZeroMQ; in collaboration with another team member)."
-				},
-				{
-					"name": "Developed Scenario Composer",
-					"description": "Developed a python program to compose a route-testing-scenarios from a list of scenarios and run the scenario in CARLA ScenarioRunner. Scenarios used and locations are randomized."
-				}
-			],
-			"techStacks": ["Python", "CARLA Simulator", "CARLA ScenarioRunner", "Git", "Bash"],
-			"tags": ["final project", "automonous tram testing modules"]
-		},
-		{
-			"type": "school",
-			"name": "Smart Room Air Conditioner",
-			"url": "https://github.com/jspmarc/IF4051-Tubes",
-			"description": "An Internet-of-Things (IoT) project that monitors and controls the air condition in a room. This system consists of an embedded component, a website, and a machine learning module.",
-			"tasks": [
-				{
-					"name": "Item Selection Component",
-					"description": "Developed a multi-option single-item selection component that hits an API on selection change (Frontend)."
-				},
-				{
-					"name": "Realtime Application State",
-					"description": "Developed websocket API to exchange real-time state of the application between the backend and the frontend (Fullstack)."
-				},
-				{
-					"name": "Implemented ML Model",
-					"description": "Implemented a TimeSeriesKMeans machine learning model to determine the air quality (Machine Learning). Also integrate the model by saving the trained model to file and using the model in the backend to determine the current condition."
-				},
-				{
-					"name": "Developed Initial Data Aggregation Pipeline",
-					"description": "Developed a data pipeline from MQTT to PySpark aggregator to get current average value of the sensors."
-				}
-			],
-			"techStacks": [
-				"Vue.js",
-				"TailwindCSS",
-				"Typescript",
-				"Python",
-				"FastAPI",
-				"InfluxDB",
-				"sklearn",
-				"Docker",
-				"PySpark",
-				"MQTT",
-				"ESP32",
-				"WebSocket",
-				"Git"
-			],
-			"tags": ["fullstack", "machine learning", "data engineer"]
-		}
-	],
-	"technologies": [
-		{
-			"name": "Python",
-			"description": "Python is my programming-mother-tongue. Since I was \"born\", I speak Python. (Obviously \"born\" as a programmer)."
-		},
-		{
-			"name": "Javascript/Typescript",
-			"description": "As Python is my Indonesian, Javascript/Typescript is my English. Not the most familiar, but confident enough to use it. Almost all non-personal-projects use Javascript/Typescript."
-		},
-		{
-			"name": "C#",
-			"description": "Is this Java or C#? I don't know. Definitely love the verbosity of C#."
-		},
-		{
-			"name": "Git",
-			"description": "Git is my middle name. Git for every project. Github is my best friend. Github Actions is my best friend's best friend."
-		},
-		{
-			"name": "Docker",
-			"description": "Installing manually is a pain. Docker is the solution. Docker is the way. Don't need the program to run? Just stop the container."
-		},
-		{
-			"name": "Linux",
-			"description": "Linux is my daily driver. My friend brought me down this rabbit hole. From Arch, to Fedora, now Pop!_OS, even my Server! But the rabbit hole is deep, I'm still learning."
-		},
-		{
-			"name": "SQL",
-			"description": "SELECT currency, money FROM wallet WHERE name='Jeremia'; IDR \"not much\". Now I want to change the currency. Looking for a job abroad."
-		}
-	]
+  "projects": [
+    {
+      "type": "freelance",
+      "name": "Ebony Hotel Website (Frontend)",
+      "description": "A hotel website to showcase the hotel and its facilities, and also to allow the user to book a room.",
+      "url": "https://hotel-ebony-batulicin-fe.vercel.app/",
+      "tasks": [
+        {
+          "name": "Developed From Scratch: Leader & Reusability",
+          "description": "Developed the frontend from scratch using Nuxt3 and TailwindCSS. Developed by a team of 2, and act as the leader. Developed by separating the website into components for reusability."
+        },
+        {
+          "name": "Developed Booking System",
+          "description": "Developed room selection and user form to book a room and send the data to the backend."
+        }
+      ],
+      "techStacks": ["Nuxt 3", "Vue3", "Typescript", "TailwindCSS", "Git"],
+      "tags": ["frontend"]
+    },
+    {
+      "type": "personal",
+      "name": "Money Backward",
+      "description": "An expense tracker to track you expenses and income.",
+      "url": "https://moneybackward.jeremiaaxel.my.id",
+      "tasks": [
+        {
+          "name": "OCR to extract amount from camera",
+          "description": "Inputing amount manually every time is a pain, especially currencies with lots of zeroes like Rupiah (IDR). Implemented OCR to extract amount from camera and input it to the amount field."
+        },
+        {
+          "name": "Graph to help visualize the incomes/expenses",
+          "description": "Use the graph to see the usage of your money, budget, and incomes."
+        },
+        {
+          "name": "OpenAPI for API Documentation",
+          "description": "APIs are documented using OpenAPI and generated using Go-Swagger."
+        }
+      ],
+      "techStacks": [
+        "Quasar",
+        "Vue",
+        "Typescript",
+        "Git",
+        "Gin",
+        "Golang",
+        "GORM",
+        "PostgreSQL",
+        "Nginx",
+        "Github Actions",
+        "AWS EC2",
+        "OpenAPI"
+      ],
+      "tags": ["fullstack", "backend", "frontend", "personal"]
+    },
+    {
+      "type": "personal",
+      "name": "This Website",
+      "description": "The website you are seeing right now.",
+      "url": "https://jeremiaaxel.my.id",
+      "tasks": [
+        {
+          "name": "Deployment and Server Configuration",
+          "description": "Deployed this project in a Digital Ocean's droplet (now in AWS EC2) and configuring everything required. Also Github Actions to automate deployment."
+        },
+        {
+          "name": "Implement Self-Hosted Tracker",
+          "description": "Implemented a tracker to track the user's interaction with the website using self-hosted Umami. No personal data is collected."
+        },
+        {
+          "name": "Sort Projects Type",
+          "description": "Show projects ordered by priority list: fulltime, internship, school, personal"
+        },
+        {
+          "name": "\"Dynamic\" Skills",
+          "description": "Skills in the Skills section are retrieved from dedicated definition of skills and tech stacks in the projects section. The skills also could be clicked as a filter to show projects that use the skill."
+        }
+      ],
+      "techStacks": [
+        "Svelte",
+        "Typescript",
+        "TailwindCSS",
+        "Shadcn",
+        "Git",
+        "Digital Ocean",
+        "Nginx",
+        "Github Actions",
+        "AWS EC2"
+      ],
+      "tags": ["frontend"]
+    },
+    {
+      "type": "fulltime",
+      "name": "Software Engineer",
+      "organization": "Quantum Teknologi Nusantara",
+      "organizationUrl": "https://quantumteknologi.com",
+      "description": "Handled various projects using various tech stack ranging from web app, desktop app, to internal utility app.",
+      "tasks": [
+        {
+          "name": "Take the initiative to implement CI/CD",
+          "description": "To automate deployment to server, I implemented CI/CD using Github Action which then adopted in other projects as well. The automation is triggered on every push to main branch in the GitHub."
+        },
+        {
+          "name": "Serve as the sole web developer for a generative AI web application",
+          "description": "Served as the sole developer, working with AI team's code, third party APIs, and US-based client's existing web application."
+        },
+        {
+          "name": "Develop a worker-server web scraper",
+          "description": "Developed a web scraper that uses worker-server architecture to distribute and manage the scraping process on multiple local machines, and integrated with other existing web applications. Developed by a team of two, and working collaboratively."
+        }
+      ],
+      "techStacks": [
+        "FastAPI",
+        "Python",
+        "PostgreSQL",
+        "Redis",
+        "MariaDB",
+        "Next.js",
+        "React.js",
+        "Javascript",
+        "Typescript",
+        "TailwindCSS",
+        "Github Actions",
+        "Git",
+        "Ubuntu-based Server",
+        "CI/CD",
+        "Gin",
+        "Golang",
+        "GORM",
+        "OpenAPI"
+      ],
+      "tags": ["fullstack", "backend", "orchestrator", "collaboration"]
+    },
+    {
+      "type": "internship",
+      "name": "Software Engineer Intern",
+      "organization": "Suitmedia",
+      "organizationUrl": "https://suitmedia.com/",
+      "description": "Enhanced an internal administration website made to score companies based on the items issued within the website.",
+      "tasks": [
+        {
+          "name": "Upgraded Role Based Access Control",
+          "description": "Upgraded role based access control from 2 roles into 5 roles with each specialized permissions (e.g. role that only able to issue item but not edit, role that only able to edit, role that can do both)."
+        },
+        {
+          "name": "Developed Item Approval System",
+          "description": "Developed two-tier item approval system: \"to be approved\", and \"approved\" or \"rejected\". Only approved items are calculated in the scoring."
+        },
+        {
+          "name": "Updated The Scoring Calculation",
+          "description": "Each item has different score and multiplier based on the category and sub-category. And the multiplier used also different if there is any item in certain categories. Yes, it's complicated!"
+        },
+        {
+          "name": "Refactored Some Part of the Code Base",
+          "description": "Maintainability is important! Refactored some of the functions and classes for the better maintainability, such as extracting repeatable logics into functions or putting constant items into list for easier change/scalability."
+        }
+      ],
+      "techStacks": [
+        ".NET",
+        "Microsoft SQL",
+        "Vue.js",
+        "Javascript",
+        "jQuery",
+        "Bootstrap",
+        "Git",
+        "C#"
+      ],
+      "tags": ["fullstack", "backend"]
+    },
+    {
+      "type": "volunteering",
+      "name": "Frontend Developer/Vice Head of Website Division",
+      "organization": "Wisuda Juli 2021",
+      "description": "Developed a website made to appreciate the ITB's July 2021 graduates.",
+      "tasks": [
+        {
+          "name": "Organize Frontend Team",
+          "description": "Organized a team of five for the frontend part from developing the UI/UX to develop the website."
+        },
+        {
+          "name": "Message for The Graduates",
+          "description": "Developed a one-direction messaging frontend for the public to give message to the graduates."
+        },
+        {
+          "name": "Initialized The Frontend Codebase",
+          "description": "Set up custom scaffolding for the codebase, although never used React and Typescript before."
+        }
+      ],
+      "techStacks": ["React.js", "Sass", "Typescript", "Git"],
+      "tags": ["frontend", "manager"]
+    },
+    {
+      "type": "volunteering",
+      "name": "StatsBot",
+      "url": "https://github.com/thieleju/statsbot/pull/15",
+      "description": "A Discord bot that shows statistics to a Discord server. A contribution to open source project as part of Hacktoberfest 2022.",
+      "tasks": [
+        {
+          "name": "Show Chess Leaderboard",
+          "description": "Develop a feature to show the chess leaderboard by fetching chess.com's API and format the data."
+        }
+      ],
+      "techStacks": ["Discord.js", "Javascript", "Git"],
+      "tags": ["open source contributor"]
+    },
+    {
+      "type": "school",
+      "name": "Development of Testing Module for Autonomous Tram Simulation Using CARLA Simulator",
+      "description": "A final project to develop a testing module for an autonomous tram simulation using CARLA Simulator.",
+      "tasks": [
+        {
+          "name": "Developed Various Testing Scenarios",
+          "description": "Developed several testing scenarios such as time scenarios, weather scenarios, traffic scenarios, and specialized scenarios."
+        },
+        {
+          "name": "Developed Tram Control Agent",
+          "description": "Developed a tram control interface on top of CARLA's car control; enables control with only throttle and brake. Developed also an agent that enables receiving control from another computer (using ZeroMQ; in collaboration with another team member)."
+        },
+        {
+          "name": "Developed Scenario Composer",
+          "description": "Developed a python program to compose a route-testing-scenarios from a list of scenarios and run the scenario in CARLA ScenarioRunner. Scenarios used and locations are randomized."
+        }
+      ],
+      "techStacks": ["Python", "CARLA Simulator", "CARLA ScenarioRunner", "Git", "Bash"],
+      "tags": ["final project", "automonous tram testing modules"]
+    },
+    {
+      "type": "school",
+      "name": "Smart Room Air Conditioner",
+      "url": "https://github.com/jspmarc/IF4051-Tubes",
+      "description": "An Internet-of-Things (IoT) project that monitors and controls the air condition in a room. This system consists of an embedded component, a website, and a machine learning module.",
+      "tasks": [
+        {
+          "name": "Item Selection Component",
+          "description": "Developed a multi-option single-item selection component that hits an API on selection change (Frontend)."
+        },
+        {
+          "name": "Realtime Application State",
+          "description": "Developed websocket API to exchange real-time state of the application between the backend and the frontend (Fullstack)."
+        },
+        {
+          "name": "Implemented ML Model",
+          "description": "Implemented a TimeSeriesKMeans machine learning model to determine the air quality (Machine Learning). Also integrate the model by saving the trained model to file and using the model in the backend to determine the current condition."
+        },
+        {
+          "name": "Developed Initial Data Aggregation Pipeline",
+          "description": "Developed a data pipeline from MQTT to PySpark aggregator to get current average value of the sensors."
+        }
+      ],
+      "techStacks": [
+        "Vue.js",
+        "TailwindCSS",
+        "Typescript",
+        "Python",
+        "FastAPI",
+        "InfluxDB",
+        "sklearn",
+        "Docker",
+        "PySpark",
+        "MQTT",
+        "ESP32",
+        "WebSocket",
+        "Git"
+      ],
+      "tags": ["fullstack", "machine learning", "data engineer"]
+    }
+  ],
+  "technologies": [
+    {
+      "name": "Python",
+      "description": "Python is my programming-mother-tongue. Since I was \"born\", I speak Python. (Obviously \"born\" as a programmer)."
+    },
+    {
+      "name": "Javascript/Typescript",
+      "description": "As Python is my Indonesian, Javascript/Typescript is my English. Not the most familiar, but confident enough to use it. Almost all non-personal-projects use Javascript/Typescript."
+    },
+    {
+      "name": "C#",
+      "description": "Is this Java or C#? I don't know. Definitely love the verbosity of C#."
+    },
+    {
+      "name": "Git",
+      "description": "Git is my middle name. Git for every project. Github is my best friend. Github Actions is my best friend's best friend."
+    },
+    {
+      "name": "Docker",
+      "description": "Installing manually is a pain. Docker is the solution. Docker is the way. Don't need the program to run? Just stop the container."
+    },
+    {
+      "name": "Linux",
+      "description": "Linux is my daily driver. My friend brought me down this rabbit hole. From Arch, to Fedora, now Pop!_OS, even my Server! But the rabbit hole is deep, I'm still learning."
+    },
+    {
+      "name": "SQL",
+      "description": "SELECT currency, money FROM wallet WHERE name='Jeremia'; IDR \"not much\". Now I want to change the currency. Looking for a job abroad."
+    }
+  ]
 }
