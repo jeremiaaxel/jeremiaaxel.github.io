@@ -16,6 +16,8 @@
   import { fade, fly } from 'svelte/transition';
   import { linear } from 'svelte/easing';
 
+  import { MoveDown } from 'lucide-svelte';
+
   const projectPriorities = [
     'fulltime',
     'freelance',
@@ -56,7 +58,30 @@
       : projects.filter((project) => containsSkills(project, [...skillsFilter]));
 
   let ready = false;
-  onMount(() => (ready = true));
+  onMount(() => {
+    ready = true;
+
+    const { hash } = document.location;
+    const scrollTo = hash && document.getElementById(hash.slice(1));
+    if (scrollTo)
+      setTimeout(() => {
+        scrollTo.scrollIntoView({
+          behavior: 'smooth',
+        });
+      }, 200);
+  });
+
+  function scrollIntoView({ target }: { target: EventTarget | null }) {
+    const hrefTarget = (target as HTMLAnchorElement).getAttribute('href');
+    if (!hrefTarget) return;
+
+    const el = document.querySelector(hrefTarget);
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
 </script>
 
 <svelte:head>
@@ -68,7 +93,7 @@
   <link href="" rel="icon" />
 </svelte:head>
 
-<section class="dark:bg-black">
+<section class="dark:bg-black scroll-smooth">
   <NavbarComponent />
   <section
     class="flex flex-auto flex-col my-5 space-y-4
@@ -76,8 +101,20 @@
 		   px-10 py-5 rounded-lg"
   >
     {#if ready}
-      <div transition:fade={{ duration: 500, easing: linear }}>
+      <div
+        transition:fade={{ duration: 500, easing: linear }}
+        class="h-[calc(92dvh-40px)] flex flex-col justify-center items-center relative"
+      >
         <ProfileComponent data={profile} />
+        <div class="flex justify-center items-center absolute bottom-0">
+          <a
+            class="bg-gray-500 dark:bg-neutral-800 rounded-full p-3 animate-bounce"
+            href="#main-content"
+            on:click|preventDefault={scrollIntoView}
+          >
+            <MoveDown />
+          </a>
+        </div>
       </div>
 
       <div
