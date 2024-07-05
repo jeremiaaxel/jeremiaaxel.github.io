@@ -5,6 +5,7 @@
   import * as Dialog from '$lib/components/ui/dialog';
   import { buttonVariants } from '$lib/components/ui/button';
   import { Badge } from '$lib/components/ui/badge';
+  import { Button } from '$lib/components/ui/button';
 
   export let data: Project;
 </script>
@@ -22,9 +23,11 @@
       {#if data.organization}
         @
         {#if data.organizationUrl}
-          <a class="link" href={data.organizationUrl}>
-            {data.organization}
-          </a>
+          <Button variant="link" class="p-0 m-0 text-base h-fit">
+            <a class="link" href={data.organizationUrl}>
+              {data.organization}
+            </a>
+          </Button>
         {:else}
           {data.organization}
         {/if}
