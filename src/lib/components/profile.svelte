@@ -18,9 +18,14 @@
 	class="flex flex-col h-[78vh] justify-center items-center text-center"
 	bind:this={profileSection}
 >
-	<div>
-		<h1 class="text-7xl">{data.name}</h1>
-		<p class="text-lg whitespace-pre-line">{data.description}</p>
+	<section
+		id="shadow-card"
+		class="flex flex-col gap-8 h-4/5 w-full max-w-[40rem] justify-center items-center text-center"
+	>
+		<section class="flex flex-col gap-4 justify-center items-center text-center">
+			<h1 class="text-7xl">{data.name}</h1>
+			<p class="text-lg whitespace-pre-line leading-snug">{data.description}</p>
+		</section>
 		<section class="links flex flex-row justify-center">
 			{#each data.links as link, idx (idx)}
 				<a
@@ -39,5 +44,5 @@
 				</a>
 			{/each}
 		</section>
-	</div>
+	</section>
 </section>
