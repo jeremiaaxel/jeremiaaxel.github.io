@@ -108,7 +108,7 @@
         <ProfileComponent data={profile} />
         <div class="flex justify-center items-center absolute bottom-0">
           <a
-            class="bg-gray-500 dark:bg-neutral-800 rounded-full p-3 animate-bounce"
+            class="bg-gray-200 dark:bg-neutral-800 rounded-full p-3 animate-bounce"
             href="#main-content"
             on:click|preventDefault={scrollIntoView}
           >
