@@ -5,7 +5,7 @@
   export let data: Notification;
 </script>
 
-<Alert.Root class="bg-gray-200 dark:bg-gray-800">
+<Alert.Root class="bg-gray-200 dark:bg-neutral-800">
   {#if data.icon}
     <svelte:component this={data.icon} class="size-5" />
   {/if}

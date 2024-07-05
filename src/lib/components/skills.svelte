@@ -40,7 +40,7 @@
             );
           }}
           class="rounded px-2 py-1 {skillsClicked.values.has(skillIdx)
-            ? 'bg-gray-300 dark:bg-gray-700'
+            ? 'bg-gray-300 dark:bg-neutral-800'
             : ''}"
           data-umami-event="Skills Filter"
           data-umami-event-skill={`${skill}-${
