@@ -1,7 +1,6 @@
 <script lang="ts">
   import * as Menubar from '$lib/components/ui/menubar';
   import Profile from '$lib/data/profile';
-  import { Badge } from '$lib/components/ui/badge';
   import DarkModeToggle from './dark-mode-toggle.svelte';
 </script>
 
@@ -26,10 +25,16 @@
       </Menubar.Content>
     </Menubar.Menu>
     <Menubar.Menu>
-      <Menubar.Trigger class="bg-slate-50 dark:bg-neutral-800 whitespace-nowrap">
+      <Menubar.Trigger>
         <a href="https://moneybackward.jeremiaaxel.my.id" target="_blank">
           Money Backward
-          <Badge class="ml-1 bg-gray-500 text-white outline-none">New</Badge>
+        </a>
+      </Menubar.Trigger>
+    </Menubar.Menu>
+    <Menubar.Menu>
+      <Menubar.Trigger>
+        <a href="https://oon.jeremiaaxel.my.id" target="_blank">
+          Oon
         </a>
       </Menubar.Trigger>
     </Menubar.Menu>
