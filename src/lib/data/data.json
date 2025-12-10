@@ -15,14 +15,22 @@
           "description": "Developed room selection and user form to book a room and send the data to the backend."
         }
       ],
-      "techStacks": ["Nuxt 3", "Vue3", "Typescript", "TailwindCSS", "Git"],
-      "tags": ["frontend"]
+      "techStacks": [
+        "Nuxt 3",
+        "Vue3",
+        "Typescript",
+        "TailwindCSS",
+        "Git"
+      ],
+      "tags": [
+        "frontend"
+      ]
     },
     {
       "type": "personal",
       "name": "Money Backward",
       "description": "An expense tracker to track you expenses and income.",
-      "url": "https://moneybackward.jeremiaaxel.my.id",
+      "url": "https://moneybackward.jeremiaaxel.dev",
       "tasks": [
         {
           "name": "OCR to extract amount from camera",
@@ -51,13 +59,18 @@
         "AWS EC2",
         "OpenAPI"
       ],
-      "tags": ["fullstack", "backend", "frontend", "personal"]
+      "tags": [
+        "fullstack",
+        "backend",
+        "frontend",
+        "personal"
+      ]
     },
     {
       "type": "personal",
       "name": "This Website",
       "description": "The website you are seeing right now.",
-      "url": "https://jeremiaaxel.my.id",
+      "url": "https://jeremiaaxel.dev",
       "tasks": [
         {
           "name": "Deployment and Server Configuration",
@@ -87,7 +100,9 @@
         "Github Actions",
         "AWS EC2"
       ],
-      "tags": ["frontend"]
+      "tags": [
+        "frontend"
+      ]
     },
     {
       "type": "fulltime",
@@ -129,7 +144,12 @@
         "GORM",
         "OpenAPI"
       ],
-      "tags": ["fullstack", "backend", "orchestrator", "collaboration"]
+      "tags": [
+        "fullstack",
+        "backend",
+        "orchestrator",
+        "collaboration"
+      ]
     },
     {
       "type": "internship",
@@ -165,7 +185,10 @@
         "Git",
         "C#"
       ],
-      "tags": ["fullstack", "backend"]
+      "tags": [
+        "fullstack",
+        "backend"
+      ]
     },
     {
       "type": "volunteering",
@@ -186,8 +209,16 @@
           "description": "Set up custom scaffolding for the codebase, although never used React and Typescript before."
         }
       ],
-      "techStacks": ["React.js", "Sass", "Typescript", "Git"],
-      "tags": ["frontend", "manager"]
+      "techStacks": [
+        "React.js",
+        "Sass",
+        "Typescript",
+        "Git"
+      ],
+      "tags": [
+        "frontend",
+        "manager"
+      ]
     },
     {
       "type": "volunteering",
@@ -200,8 +231,14 @@
           "description": "Develop a feature to show the chess leaderboard by fetching chess.com's API and format the data."
         }
       ],
-      "techStacks": ["Discord.js", "Javascript", "Git"],
-      "tags": ["open source contributor"]
+      "techStacks": [
+        "Discord.js",
+        "Javascript",
+        "Git"
+      ],
+      "tags": [
+        "open source contributor"
+      ]
     },
     {
       "type": "school",
@@ -221,8 +258,17 @@
           "description": "Developed a python program to compose a route-testing-scenarios from a list of scenarios and run the scenario in CARLA ScenarioRunner. Scenarios used and locations are randomized."
         }
       ],
-      "techStacks": ["Python", "CARLA Simulator", "CARLA ScenarioRunner", "Git", "Bash"],
-      "tags": ["final project", "automonous tram testing modules"]
+      "techStacks": [
+        "Python",
+        "CARLA Simulator",
+        "CARLA ScenarioRunner",
+        "Git",
+        "Bash"
+      ],
+      "tags": [
+        "final project",
+        "automonous tram testing modules"
+      ]
     },
     {
       "type": "school",
@@ -262,7 +308,11 @@
         "WebSocket",
         "Git"
       ],
-      "tags": ["fullstack", "machine learning", "data engineer"]
+      "tags": [
+        "fullstack",
+        "machine learning",
+        "data engineer"
+      ]
     }
   ],
   "technologies": [

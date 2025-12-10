@@ -26,14 +26,14 @@
     </Menubar.Menu>
     <Menubar.Menu>
       <Menubar.Trigger>
-        <a href="https://moneybackward.jeremiaaxel.my.id" target="_blank">
+        <a href="https://moneybackward.jeremiaaxel.dev" target="_blank">
           Money Backward
         </a>
       </Menubar.Trigger>
     </Menubar.Menu>
     <Menubar.Menu>
       <Menubar.Trigger>
-        <a href="https://oon.jeremiaaxel.my.id" target="_blank">
+        <a href="https://oon.jeremiaaxel.dev" target="_blank">
           Oon
         </a>
       </Menubar.Trigger>
