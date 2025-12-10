@@ -38,13 +38,10 @@
     </Card.Description>
   </Card.Header>
   <Card.Content class="flex flex-col gap-4">
-    <Accordion.Root class="list-decimal list-inside flex flex-col">
+    <Accordion.Root type="multiple" class="list-decimal list-inside flex flex-col">
       {#each data.tasks as task}
         <Accordion.Item value={task.name}>
-          <Accordion.Trigger
-            data-umami-event="Project Card Task"
-            data-umami-event-project-task={`${data.name}-${task.name}`}
-          >
+          <Accordion.Trigger>
             {task.name}
           </Accordion.Trigger>
           <Accordion.Content>
@@ -70,13 +67,7 @@
   </Card.Content>
   <Card.Footer>
     <Dialog.Root>
-      <Dialog.Trigger
-        class={buttonVariants({ variant: 'outline' })}
-        data-umami-event="Project Card See Full"
-        data-umami-event-project={data.name}
-      >
-        See full
-      </Dialog.Trigger>
+      <Dialog.Trigger class={buttonVariants({ variant: 'outline' })}>See full</Dialog.Trigger>
       <Dialog.Content class="overflow-y-scroll max-h-screen">
         <Dialog.Header>
           <Dialog.Title>

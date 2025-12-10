@@ -77,8 +77,8 @@
           "description": "Deployed this project in a Digital Ocean's droplet (now in AWS EC2) and configuring everything required. Also Github Actions to automate deployment."
         },
         {
-          "name": "Implement Self-Hosted Tracker",
-          "description": "Implemented a tracker to track the user's interaction with the website using self-hosted Umami. No personal data is collected."
+          "name": "Implement Tracker",
+          "description": "Implemented a tracker to track the user's interaction with the website using Posthog. No personal data is collected."
         },
         {
           "name": "Sort Projects Type",

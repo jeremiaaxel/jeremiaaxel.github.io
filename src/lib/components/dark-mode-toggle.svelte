@@ -5,20 +5,24 @@
   import { toggleMode, mode } from 'mode-watcher';
 </script>
 
-<button
-  type="button"
+<div
+  role="button"
+  tabindex="0"
   on:click={() => {
     toggleMode();
-    toast(`Switched to ${$mode === 'dark' ? 'dark' : 'light'} mode`, {
-      icon: $mode === 'dark' ? Moon : Sun,
-    });
-    window.umami.track('Dark Mode Toggle', { mode: $mode === 'dark' ? 'dark' : 'light' });
+    toast(`Switched to ${mode.current === 'dark' ? 'dark' : 'light'} mode`);
+  }}
+  on:keydown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      toggleMode();
+      toast(`Switched to ${mode.current === 'dark' ? 'dark' : 'light'} mode`);
+    }
   }}
 >
-  {#if $mode === 'dark'}
+  {#if mode.current === 'dark'}
     <Moon class="h-[1.2rem] w-[1.2rem] transition-all" />
   {:else}
     <Sun class="h-[1.2rem] w-[1.2rem] transition-all" />
   {/if}
   <span class="sr-only">Toggle theme</span>
-</button>
+</div>
