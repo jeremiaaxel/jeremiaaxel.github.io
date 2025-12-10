@@ -39,7 +39,7 @@
               `${skillsClicked.values.has(skillIdx) ? 'Added' : 'Removed'} "${skill}" skill filter`,
             );
           }}
-          class="rounded px-2 py-1 {skillsClicked.values.has(skillIdx)
+          class="rounded cursor-pointer px-2 py-1 {skillsClicked.values.has(skillIdx)
             ? 'bg-gray-300 dark:bg-neutral-800'
             : ''}"
         >
