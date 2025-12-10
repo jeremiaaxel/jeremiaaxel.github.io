@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "type": "freelance",
+      "type": "work experiences - freelance",
       "name": "Ebony Hotel Website (Frontend)",
       "description": "A hotel website to showcase the hotel and its facilities, and also to allow the user to book a room.",
       "url": "https://hotel-ebony-batulicin-fe.vercel.app/",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "type": "personal",
+      "type": "projects - personal",
       "name": "Money Backward",
       "description": "An expense tracker to track your expenses and income. Originally built with Quasar & Golang, rewritten in SvelteKit for better developer experience.",
       "url": "https://moneybackward.jeremiaaxel.dev",
@@ -74,11 +74,11 @@
         "fullstack",
         "backend",
         "frontend",
-        "personal"
+        "projects - personal"
       ]
     },
     {
-      "type": "personal",
+      "type": "projects - personal",
       "name": "This Website",
       "description": "The website you are seeing right now.",
       "url": "https://jeremiaaxel.dev",
@@ -89,11 +89,11 @@
         },
         {
           "name": "Implement Tracker",
-          "description": "Implemented a tracker to track the user's interaction with the website using Posthog. No personal data is collected."
+          "description": "Implemented a tracker to track the user's interaction with the website using Posthog. No projects - personal data is collected."
         },
         {
           "name": "Sort Projects Type",
-          "description": "Show projects ordered by priority list: fulltime, internship, school, personal"
+          "description": "Show projects ordered by priority list: work experiences - fulltime, work experiences - internship, projects - school, projects - personal"
         },
         {
           "name": "\"Dynamic\" Skills",
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "type": "fulltime",
+      "type": "work experiences - fulltime",
       "name": "Software Engineer",
       "organization": "Quantum Teknologi Nusantara",
       "organizationUrl": "https://quantumteknologi.com",
@@ -159,7 +159,7 @@
       ]
     },
     {
-      "type": "fulltime",
+      "type": "work experiences - fulltime",
       "name": "Melengo",
       "organization": "Quantum Teknologi Nusantara",
       "organizationUrl": "https://quantumteknologi.com",
@@ -206,7 +206,7 @@
       ]
     },
     {
-      "type": "internship",
+      "type": "work experiences - internship",
       "name": "Software Engineer Intern",
       "organization": "Suitmedia",
       "organizationUrl": "https://suitmedia.com/",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "type": "volunteering",
+      "type": "projects - volunteering",
       "name": "Frontend Developer/Vice Head of Website Division",
       "organization": "Wisuda Juli 2021",
       "description": "Developed a website made to appreciate the ITB's July 2021 graduates.",
@@ -275,7 +275,7 @@
       ]
     },
     {
-      "type": "volunteering",
+      "type": "projects - volunteering",
       "name": "StatsBot",
       "url": "https://github.com/thieleju/statsbot/pull/15",
       "description": "A Discord bot that shows statistics to a Discord server. A contribution to open source project as part of Hacktoberfest 2022.",
@@ -295,7 +295,7 @@
       ]
     },
     {
-      "type": "school",
+      "type": "projects - school",
       "name": "Development of Testing Module for Autonomous Tram Simulation Using CARLA Simulator",
       "description": "A final project to develop a testing module for an autonomous tram simulation using CARLA Simulator.",
       "tasks": [
@@ -325,7 +325,7 @@
       ]
     },
     {
-      "type": "school",
+      "type": "projects - school",
       "name": "Smart Room Air Regulator",
       "url": "https://github.com/jspmarc/IF4051-Tubes",
       "description": "An Internet-of-Things (IoT) project that monitors and controls the air quality in a room. This system consists of an embedded component, a website, and a machine learning module.",
@@ -376,7 +376,7 @@
     },
     {
       "name": "Javascript/Typescript",
-      "description": "As Python is my Indonesian, Javascript/Typescript is my English. Not the most familiar, but confident enough to use it. Almost all non-personal-projects use Javascript/Typescript."
+      "description": "As Python is my Indonesian, Javascript/Typescript is my English. Not the most familiar, but confident enough to use it. Almost all non-projects - personal-projects use Javascript/Typescript."
     },
     {
       "name": "C#",
