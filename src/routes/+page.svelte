@@ -125,7 +125,8 @@
         transition:fly={{ delay: 400, duration: 700, easing: linear, y: 100, opacity: 0 }}
         class="flex flex-col md:flex-row-reverse gap-5"
       >
-        <section id="sidebar" class="md:w-3/12 md:sticky md:top-6 h-fit">
+        <section id="sidebar"
+class="md:w-3/12 md:sticky md:top-6 h-fit">
           <SkillsComponent data={skills} bind:skillsClicked />
         </section>
         <section id="main-content" class="md:w-9/12">
