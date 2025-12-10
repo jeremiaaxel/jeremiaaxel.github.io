@@ -29,7 +29,7 @@
     {
       "type": "personal",
       "name": "Money Backward",
-      "description": "An expense tracker to track you expenses and income.",
+      "description": "An expense tracker to track your expenses and income. Originally built with Quasar & Golang, rewritten in SvelteKit for better developer experience.",
       "url": "https://moneybackward.jeremiaaxel.dev",
       "tasks": [
         {
@@ -41,23 +41,34 @@
           "description": "Use the graph to see the usage of your money, budget, and incomes."
         },
         {
-          "name": "OpenAPI for API Documentation",
-          "description": "APIs are documented using OpenAPI and generated using Go-Swagger."
+          "name": "Modern Tech Stack Application (V2)",
+          "description": "Utilize tRPC for client-server communication, Drizzle as ORM, ShadCN as UI component library."
+        },
+        {
+          "name": "Infrastructure & Deployment",
+          "description": "Started with AWS EC2 (Docker & Nginx). Migrated to Vercel (Frontend/API) + NeonDB (Postgres) + Posthog (Analytics) for serverless scalability."
         }
       ],
       "techStacks": [
+        "SvelteKit",
+        "Typescript",
+        "tRPC",
+        "Drizzle",
+        "ShadCN",
+        "TailwindCSS",
+        "Vercel",
+        "NeonDB",
+        "Posthog",
         "Quasar",
         "Vue",
-        "Typescript",
-        "Git",
-        "Gin",
         "Golang",
+        "Gin",
         "GORM",
         "PostgreSQL",
+        "Docker",
         "Nginx",
-        "Github Actions",
         "AWS EC2",
-        "OpenAPI"
+        "Git"
       ],
       "tags": [
         "fullstack",
@@ -109,19 +120,19 @@
       "name": "Software Engineer",
       "organization": "Quantum Teknologi Nusantara",
       "organizationUrl": "https://quantumteknologi.com",
-      "description": "Handled various projects using various tech stack ranging from web app, desktop app, to internal utility app.",
+      "description": "Handled various projects and tasks using various tech stack ranging from web app, desktop app, to internal utility app. Contributing to Engineering Excellence and Company-wide Improvements.",
       "tasks": [
         {
-          "name": "Take the initiative to implement CI/CD",
-          "description": "To automate deployment to server, I implemented CI/CD using Github Action which then adopted in other projects as well. The automation is triggered on every push to main branch in the GitHub."
+          "name": "Leadership & Mentorship",
+          "description": "Mentor peers about best practices and workflow improvements. Developed standardized software engineer interview guidelines (technical and non-technical criteria) to improve interview process."
         },
         {
-          "name": "Serve as the sole web developer for a generative AI web application",
-          "description": "Served as the sole developer, working with AI team's code, third party APIs, and US-based client's existing web application."
+          "name": "CI/CD & DevOps",
+          "description": "Implemented CI/CD and tools to help the team work faster, reducing manual deployment steps. Proposed and integrated tech tools to improve reliability and observability."
         },
         {
-          "name": "Develop a worker-server web scraper",
-          "description": "Developed a web scraper that uses worker-server architecture to distribute and manage the scraping process on multiple local machines, and integrated with other existing web applications. Developed by a team of two, and working collaboratively."
+          "name": "Generative AI Product",
+          "description": "Collaborated cross-functional team to rapidly develop a generative AI product, with tight deadlines, working closely with AI tools."
         }
       ],
       "techStacks": [
@@ -129,7 +140,6 @@
         "Python",
         "PostgreSQL",
         "Redis",
-        "MariaDB",
         "Next.js",
         "React.js",
         "Javascript",
@@ -137,18 +147,62 @@
         "TailwindCSS",
         "Github Actions",
         "Git",
-        "Ubuntu-based Server",
-        "CI/CD",
-        "Gin",
-        "Golang",
-        "GORM",
-        "OpenAPI"
+        "Docker",
+        "Ubuntu-based Server"
       ],
       "tags": [
         "fullstack",
         "backend",
         "orchestrator",
-        "collaboration"
+        "collaboration",
+        "leadership"
+      ]
+    },
+    {
+      "type": "fulltime",
+      "name": "Melengo",
+      "organization": "Quantum Teknologi Nusantara",
+      "organizationUrl": "https://quantumteknologi.com",
+      "description": "A generative AI project where I transitioned to a leadership role.",
+      "tasks": [
+        {
+          "name": "Project Leadership",
+          "description": "Spearheaded a generative AI project, transitioning from individual web development to lead a 3-person team with tactical decision making."
+        },
+        {
+          "name": "Infrastructure Optimization",
+          "description": "Re-architected serverless AI workers, significantly reducing failure rate from ±30% to ±5% and reducing daily GPU costs from $100+ to around $15."
+        },
+        {
+          "name": "Integration & Collaboration",
+          "description": "Integrated third-party AI services, collaborated technically with the AI team and international stakeholders."
+        },
+        {
+          "name": "Quality Assurance",
+          "description": "Improved code quality by doing code-review and implementing automated end-to-end testing, feature flags, and A/B testing strategies."
+        }
+      ],
+      "techStacks": [
+        "FastAPI",
+        "Python",
+        "LangChain",
+        "Next.js",
+        "React.js",
+        "Typescript",
+        "TailwindCSS",
+        "Playwright",
+        "Vitest",
+        "Runpod",
+        "Lambdalabs",
+        "Docker",
+        "Git"
+      ],
+      "tags": [
+        "fullstack",
+        "backend",
+        "ai",
+        "leadership",
+        "optimization"
       ]
     },
     {
@@ -247,15 +301,15 @@
       "tasks": [
         {
           "name": "Developed Various Testing Scenarios",
-          "description": "Developed several testing scenarios such as time scenarios, weather scenarios, traffic scenarios, and specialized scenarios."
+          "description": "Created diverse testing scenarios including time, weather, traffic, and specialized conditions."
         },
         {
           "name": "Developed Tram Control Agent",
-          "description": "Developed a tram control interface on top of CARLA's car control; enables control with only throttle and brake. Developed also an agent that enables receiving control from another computer (using ZeroMQ; in collaboration with another team member)."
+          "description": "Implemented a tram control interface and agent, enabling control via keyboard, another program as well as remote control via ZeroMQ."
         },
         {
           "name": "Developed Scenario Composer",
-          "description": "Developed a python program to compose a route-testing-scenarios from a list of scenarios and run the scenario in CARLA ScenarioRunner. Scenarios used and locations are randomized."
+          "description": "Designed a Python-based scenario composer to generate randomized route-testing scenarios for CARLA ScenarioRunner."
         }
       ],
       "techStacks": [
