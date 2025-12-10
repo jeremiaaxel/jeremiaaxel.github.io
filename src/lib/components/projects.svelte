@@ -5,6 +5,8 @@
 
   export let data: Project[];
   export let priorities: string[] = ['fulltime', 'internship', 'school', 'personal'];
+  export let toggleSkill: (skill: string) => void;
+  export let activeSkills: Set<string>;
 
   // Get unique priorities
   const uniquePriorities = [...new Set(priorities)];
@@ -22,7 +24,7 @@
           <h3 class="text-xl capitalize">{priority}</h3>
           {#each sortedProjects[priority] as project}
             <div class="project-item flex flex-col my-2">
-              <ProjectCardComponent data={project} />
+              <ProjectCardComponent data={project} {toggleSkill} {activeSkills} />
             </div>
           {/each}
         {/if}

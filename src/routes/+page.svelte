@@ -5,8 +5,11 @@
   import dataJson from '$lib/data/data.json';
   import profileJson from '$lib/data/profile';
 
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   import { containsSkills, extractTechStacks } from '$lib/utils/projects';
+  /* eslint-enable @typescript-eslint/no-unused-vars */
   import { extractTechnologies } from '$lib/utils/technologies';
+  import { toast } from 'svelte-sonner';
 
   import ProjectsComponent from '$lib/components/projects.svelte';
   import ProfileComponent from '$lib/components/profile.svelte';
@@ -35,27 +38,28 @@
   const skills = [...new Set(skillsFromProjects.concat(skillsFromTechnologies))].sort();
 
   let skillsClicked = {
-    latestClick: 0,
-    values: new Set<number>(),
+    latestClick: '',
+    values: new Set<string>(),
   };
 
-  let skillsFilter = new Set<string>();
-
-  function changedSkillsClicked(latestClick: number, values: Set<number>) {
-    let report = '';
-    values.forEach((num) => (report += skills[num] + '|'));
-    report = report.trim();
-    skillsFilter = new Set<string>(report.split('|').filter((skillStr) => skillStr != ''));
+  function toggleSkill(skill: string) {
+    if (skillsClicked.values.has(skill)) {
+      skillsClicked.values.delete(skill);
+      toast(`Removed "${skill}" filter`);
+    } else {
+      skillsClicked.values.add(skill);
+      toast(`Added "${skill}" filter`);
+    }
+    skillsClicked.values = skillsClicked.values;
+    skillsClicked.latestClick = skill;
   }
-
-  $: changedSkillsClicked(skillsClicked.latestClick, skillsClicked.values);
 
   let filteredProjects: Project[];
   // Get projects that match the skills filter (if any)
   $: filteredProjects =
-    skillsFilter.size == 0
+    skillsClicked.values.size == 0
       ? projects
-      : projects.filter((project) => containsSkills(project, [...skillsFilter]));
+      : projects.filter((project) => containsSkills(project, [...skillsClicked.values]));
 
   let ready = false;
   onMount(() => {
@@ -125,7 +129,12 @@
           <SkillsComponent data={skills} bind:skillsClicked />
         </section>
         <section id="main-content" class="md:w-9/12">
-          <ProjectsComponent bind:data={filteredProjects} priorities={projectPriorities} />
+          <ProjectsComponent
+            bind:data={filteredProjects}
+            priorities={projectPriorities}
+            {toggleSkill}
+            activeSkills={skillsClicked.values}
+          />
         </section>
       </div>
     {/if}

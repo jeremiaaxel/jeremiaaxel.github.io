@@ -26,10 +26,14 @@ export function sortProjectsByPriorities(data: Project[], priorities: string[]):
 
 export function extractTechStacks(projects: Project[]) {
   const techStacks = projects.map((project) => project.techStacks);
-  const uniqueTechStacks = [...new Set(techStacks.flat())];
-  return uniqueTechStacks;
+  const tags = projects.map((project) => project.tags);
+  const uniqueSkills = [...new Set([...techStacks.flat(), ...tags.flat()])];
+  return uniqueSkills;
 }
 
 export function containsSkills(project: Project, skills: string[]): boolean {
-  return project.techStacks.filter((value) => skills.includes(value)).length > 0;
+  return (
+    project.techStacks.filter((value) => skills.includes(value)).length > 0 ||
+    project.tags.filter((value) => skills.includes(value)).length > 0
+  );
 }

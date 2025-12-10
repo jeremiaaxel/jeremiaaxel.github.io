@@ -6,8 +6,8 @@
 
   export let data: string[];
   export let skillsClicked = {
-    latestClick: -1,
-    values: new Set<number>(),
+    latestClick: '',
+    values: new Set<string>(),
   };
   const notification = {
     icon: Info,
@@ -15,13 +15,14 @@
     detail: 'Click on the skills to filter the projects (OR filters)',
   };
 
-  function updateSkillsClicked(skillIdx: number) {
-    if (skillsClicked.values.has(skillIdx)) {
-      skillsClicked.values.delete(skillIdx);
+  function updateSkillsClicked(skill: string) {
+    if (skillsClicked.values.has(skill)) {
+      skillsClicked.values.delete(skill);
     } else {
-      skillsClicked.values.add(skillIdx);
+      skillsClicked.values.add(skill);
     }
-    skillsClicked.latestClick = skillIdx;
+    skillsClicked.values = skillsClicked.values; // Trigger reactivity
+    skillsClicked.latestClick = skill;
   }
 </script>
 
@@ -34,12 +35,12 @@
         <Button
           variant="outline"
           on:click={() => {
-            updateSkillsClicked(skillIdx);
+            updateSkillsClicked(skill);
             toast(
-              `${skillsClicked.values.has(skillIdx) ? 'Added' : 'Removed'} "${skill}" skill filter`,
+              `${skillsClicked.values.has(skill) ? 'Added' : 'Removed'} "${skill}" skill filter`,
             );
           }}
-          class="rounded cursor-pointer px-2 py-1 {skillsClicked.values.has(skillIdx)
+          class="rounded px-2 py-1 {skillsClicked.values.has(skill)
             ? 'bg-gray-300 dark:bg-neutral-800'
             : ''}"
         >

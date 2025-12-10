@@ -8,6 +8,8 @@
   import { Button } from '$lib/components/ui/button';
 
   export let data: Project;
+  export let toggleSkill: (skill: string) => void;
+  export let activeSkills: Set<string>;
 </script>
 
 <Card.Root>
@@ -55,13 +57,29 @@
       {#each data.techStacks.sort((a, b) => a
           .toLowerCase()
           .localeCompare(b.toLowerCase())) as thisTechStack}
-        <Badge variant="outline">{thisTechStack}</Badge>
+        <Badge
+          variant="outline"
+          class="cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
+            thisTechStack,
+          )
+            ? 'bg-gray-300 dark:bg-neutral-800'
+            : ''}"
+          on:click={() => toggleSkill(thisTechStack)}>{thisTechStack}</Badge
+        >
       {/each}
     </div>
     <div class="tags">
       <div class="font-medium">Tag(s):</div>
       {#each data.tags as tag}
-        <Badge variant="outline" class="capitalize">{tag}</Badge>
+        <Badge
+          variant="outline"
+          class="capitalize cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
+            tag,
+          )
+            ? 'bg-gray-300 dark:bg-neutral-800'
+            : ''}"
+          on:click={() => toggleSkill(tag)}>{tag}</Badge
+        >
       {/each}
     </div>
   </Card.Content>
@@ -107,13 +125,29 @@
             {#each data.techStacks.sort((a, b) => a
                 .toLowerCase()
                 .localeCompare(b.toLowerCase())) as thisTechStack}
-              <Badge variant="outline">{thisTechStack}</Badge>
+              <Badge
+                variant="outline"
+                class="cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
+                  thisTechStack,
+                )
+                  ? 'bg-gray-300 dark:bg-neutral-800'
+                  : ''}"
+                on:click={() => toggleSkill(thisTechStack)}>{thisTechStack}</Badge
+              >
             {/each}
           </div>
           <div class="tags">
             <div class="font-medium">Tag(s):</div>
             {#each data.tags as tag}
-              <Badge variant="outline" class="capitalize">{tag}</Badge>
+              <Badge
+                variant="outline"
+                class="capitalize cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
+                  tag,
+                )
+                  ? 'bg-gray-300 dark:bg-neutral-800'
+                  : ''}"
+                on:click={() => toggleSkill(tag)}>{tag}</Badge
+              >
             {/each}
           </div>
         </div>
