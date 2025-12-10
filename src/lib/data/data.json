@@ -326,9 +326,9 @@
     },
     {
       "type": "school",
-      "name": "Smart Room Air Conditioner",
+      "name": "Smart Room Air Regulator",
       "url": "https://github.com/jspmarc/IF4051-Tubes",
-      "description": "An Internet-of-Things (IoT) project that monitors and controls the air condition in a room. This system consists of an embedded component, a website, and a machine learning module.",
+      "description": "An Internet-of-Things (IoT) project that monitors and controls the air quality in a room. This system consists of an embedded component, a website, and a machine learning module.",
       "tasks": [
         {
           "name": "Item Selection Component",
