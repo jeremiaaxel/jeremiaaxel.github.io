@@ -1,5 +1,3 @@
-// import adapter from '@sveltejs/adapter-static';
-// import adapter from '@sveltejs/adapter-node';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
