@@ -89,12 +89,39 @@
 </script>
 
 <svelte:head>
-  <title>Jeremia Axel's Portofolio Web</title>
+  <title>Jeremia Axel | Software Engineer Portfolio</title>
   <meta
-    content="Jeremia Axel's Portofolio Web to show projects and/or experiences."
     name="description"
+    content="Jeremia Axel's Portfolio Web. Software Engineer. I love to learn new things. Looking for the opportunity to work with a great team and awesome technologies!"
   />
-  <link href="" rel="icon" />
+  <meta
+    name="keywords"
+    content="Jeremia Axel, Software Engineer, Portfolio, Fullstack Developer, Web Development, Projects, Experience"
+  />
+  <meta name="author" content="Jeremia Axel" />
+  <link rel="canonical" href="https://jeremiaaxel.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jeremiaaxel.dev/" />
+  <meta property="og:title" content="Jeremia Axel | Software Engineer Portfolio" />
+  <meta
+    property="og:description"
+    content="Jeremia Axel's Portfolio Web. Software Engineer. I love to learn new things. Looking for the opportunity to work with a great team and awesome technologies!"
+  />
+  <meta property="og:image" content="https://jeremiaaxel.dev/favicon.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://jeremiaaxel.dev/" />
+  <meta property="twitter:title" content="Jeremia Axel | Software Engineer Portfolio" />
+  <meta
+    property="twitter:description"
+    content="Jeremia Axel's Portfolio Web. Software Engineer. I love to learn new things. Looking for the opportunity to work with a great team and awesome technologies!"
+  />
+  <meta property="twitter:image" content="https://jeremiaaxel.dev/favicon.png" />
+
+  <link href="favicon.png" rel="icon" />
 </svelte:head>
 
 <section class="dark:bg-black scroll-smooth">
