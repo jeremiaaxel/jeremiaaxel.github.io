@@ -10,6 +10,7 @@
   onMount(() => {
     if (browser) {
       posthog.init(PUBLIC_POSTHOG_API_KEY, {
+        ui_host: "https://us.i.posthog.com",
         api_host: PUBLIC_POSTHOG_HOST,
         person_profiles: 'always',
       });
