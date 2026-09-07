@@ -4,13 +4,13 @@ import { Mail, Linkedin, Github } from 'lucide-svelte';
 const data: Profile = {
   name: 'Jeremia Axel',
   description:
-    'Software Engineer. I love to learn new things.\nLooking for the opportunity to work with a great team and awesome technologies!',
+    'Software Engineer... or am I?',
   links: [
     {
       name: 'email',
       icon: Mail,
       iconAlt: 'Email icon',
-      url: 'mailto:jeremiaaxelb+myweb@gmail.com',
+      url: 'mailto:web@jeremiaaxel.dev',
     },
     {
       name: 'linkedin',
