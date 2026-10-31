@@ -32,13 +32,6 @@
       </Menubar.Trigger>
     </Menubar.Menu>
     <Menubar.Menu>
-      <Menubar.Trigger>
-        <a href="https://oon.jeremiaaxel.dev" target="_blank">
-          Oon
-        </a>
-      </Menubar.Trigger>
-    </Menubar.Menu>
-    <Menubar.Menu>
       <Menubar.Trigger class="cursor-pointer !ml-auto !bg-opacity-0">
         <DarkModeToggle />
       </Menubar.Trigger>
