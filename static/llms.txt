@@ -1,0 +1,8 @@
+# Jeremia Axel — Personal Sites
+
+Personal sites and apps of Jeremia Axel, a software engineer.
+
+- [Portfolio](https://jeremiaaxel.dev/): projects, work experience, and skills.
+- [Blog](https://blog.jeremiaaxel.dev/): writing on software engineering and technology. RSS feed at https://blog.jeremiaaxel.dev/rss.xml.
+- [Money Backward](https://moneybackward.jeremiaaxel.dev/): expense and income tracker web app (login required).
+- [Work Utilities](https://work-utils.jeremiaaxel.dev/): small public work tools, focused on Japanese reading and PDF translation.

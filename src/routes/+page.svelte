@@ -4,7 +4,7 @@
 
   import dataJson from '$lib/data/data.json';
   import profileJson from '$lib/data/profile';
-  import { siteUrl, resolveAppUrl } from '$lib/config';
+  import { siteUrl, appUrl, BASE_DOMAIN, resolveAppUrl } from '$lib/config';
 
   /* eslint-disable @typescript-eslint/no-unused-vars */
   import { containsSkills, extractTechStacks } from '$lib/utils/projects';
@@ -33,6 +33,23 @@
 
   const profile: Profile = profileJson;
   const data = dataJson;
+
+  // Schema.org identity for AI/knowledge-graph crawlers. Rendered via
+  // JSON.stringify in the head below — raw braces in a markup <script> get
+  // parsed as Svelte expressions, so the JSON must go through an expression.
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Jeremia Axel',
+    url: `${siteUrl}/`,
+    email: `mailto:web@${BASE_DOMAIN}`,
+    jobTitle: 'Software Engineer',
+    sameAs: [
+      'https://www.linkedin.com/in/jeremiaaxel/',
+      'https://github.com/jeremiaaxel',
+      `${appUrl('blog')}/`,
+    ],
+  };
   const projects: Project[] = data.projects.map((project) => ({
     ...project,
     url: project.url ? resolveAppUrl(project.url) : undefined,
@@ -128,6 +145,10 @@
   <meta property="twitter:image" content={siteUrl + '/favicon.png'} />
 
   <link href="favicon.png" rel="icon" />
+
+  <!-- {@html must wrap the whole <script> element: Svelte treats the content
+       of a markup <script> tag as raw text, so nothing inside it evaluates. -->
+  {@html `<script type="application/ld+json">${JSON.stringify(personSchema)}</script>`}
 </svelte:head>
 
 <section class="dark:bg-black scroll-smooth">

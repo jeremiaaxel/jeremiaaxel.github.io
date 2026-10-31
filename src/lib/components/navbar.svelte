@@ -27,16 +27,17 @@
     </Menubar.Menu>
     <Menubar.Menu>
       <Menubar.Trigger>
-        <a href={appUrl('moneybackward')} target="_blank">
-          Money Backward
-        </a>
+        <a href={appUrl('blog')}>Blog</a>
       </Menubar.Trigger>
     </Menubar.Menu>
     <Menubar.Menu>
       <Menubar.Trigger>
-        <a href={appUrl('work-utils')} target="_blank">
-          Work Utils
-        </a>
+        <a href={appUrl('moneybackward')}>Money Backward</a>
+      </Menubar.Trigger>
+    </Menubar.Menu>
+    <Menubar.Menu>
+      <Menubar.Trigger>
+        <a href={appUrl('work-utils')}>Work Utils</a>
       </Menubar.Trigger>
     </Menubar.Menu>
     <Menubar.Menu>
