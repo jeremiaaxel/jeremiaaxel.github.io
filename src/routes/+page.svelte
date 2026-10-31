@@ -4,6 +4,7 @@
 
   import dataJson from '$lib/data/data.json';
   import profileJson from '$lib/data/profile';
+  import { siteUrl, resolveAppUrl } from '$lib/config';
 
   /* eslint-disable @typescript-eslint/no-unused-vars */
   import { containsSkills, extractTechStacks } from '$lib/utils/projects';
@@ -31,7 +32,12 @@
   ];
 
   const profile: Profile = profileJson;
-  const { projects, technologies } = dataJson;
+  const data = dataJson;
+  const projects: Project[] = data.projects.map((project) => ({
+    ...project,
+    url: project.url ? resolveAppUrl(project.url) : undefined,
+  }));
+  const { technologies } = data;
 
   const skillsFromProjects: string[] = extractTechStacks(projects as Project[]);
   const skillsFromTechnologies: string[] = extractTechnologies(technologies);
@@ -99,27 +105,27 @@
     content="Jeremia Axel, Software Engineer, Portfolio, Fullstack Developer, Web Development, Projects, Experience"
   />
   <meta name="author" content="Jeremia Axel" />
-  <link rel="canonical" href="https://jeremiaaxel.dev/" />
+  <link rel="canonical" href={siteUrl + '/'} />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jeremiaaxel.dev/" />
+  <meta property="og:url" content={siteUrl + '/'} />
   <meta property="og:title" content="Jeremia Axel | Software Engineer Portfolio" />
   <meta
     property="og:description"
     content="Jeremia Axel's Portfolio Web. Software Engineer. I love to learn new things. Looking for the opportunity to work with a great team and awesome technologies!"
   />
-  <meta property="og:image" content="https://jeremiaaxel.dev/favicon.png" />
+  <meta property="og:image" content={siteUrl + '/favicon.png'} />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://jeremiaaxel.dev/" />
+  <meta property="twitter:url" content={siteUrl + '/'} />
   <meta property="twitter:title" content="Jeremia Axel | Software Engineer Portfolio" />
   <meta
     property="twitter:description"
     content="Jeremia Axel's Portfolio Web. Software Engineer. I love to learn new things. Looking for the opportunity to work with a great team and awesome technologies!"
   />
-  <meta property="twitter:image" content="https://jeremiaaxel.dev/favicon.png" />
+  <meta property="twitter:image" content={siteUrl + '/favicon.png'} />
 
   <link href="favicon.png" rel="icon" />
 </svelte:head>

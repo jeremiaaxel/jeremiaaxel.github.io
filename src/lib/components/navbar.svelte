@@ -1,6 +1,7 @@
 <script lang="ts">
   import * as Menubar from '$lib/components/ui/menubar';
   import Profile from '$lib/data/profile';
+  import { appUrl } from '$lib/config';
   import DarkModeToggle from './dark-mode-toggle.svelte';
 </script>
 
@@ -26,8 +27,15 @@
     </Menubar.Menu>
     <Menubar.Menu>
       <Menubar.Trigger>
-        <a href="https://moneybackward.jeremiaaxel.dev" target="_blank">
+        <a href={appUrl('moneybackward')} target="_blank">
           Money Backward
+        </a>
+      </Menubar.Trigger>
+    </Menubar.Menu>
+    <Menubar.Menu>
+      <Menubar.Trigger>
+        <a href={appUrl('work-utils')} target="_blank">
+          Work Utils
         </a>
       </Menubar.Trigger>
     </Menubar.Menu>

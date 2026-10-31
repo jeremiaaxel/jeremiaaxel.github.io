@@ -1,4 +1,5 @@
 import type Profile from '$lib/types/profile';
+import { BASE_DOMAIN } from '$lib/config';
 import { Mail, Linkedin, Github } from 'lucide-svelte';
 
 const data: Profile = {
@@ -10,7 +11,7 @@ const data: Profile = {
       name: 'email',
       icon: Mail,
       iconAlt: 'Email icon',
-      url: 'mailto:web@jeremiaaxel.dev',
+      url: `mailto:web@${BASE_DOMAIN}`,
     },
     {
       name: 'linkedin',
