@@ -40,48 +40,54 @@
     </Card.Description>
   </Card.Header>
   <Card.Content class="flex flex-col gap-4">
-    <Accordion.Root type="multiple" class="list-decimal list-inside flex flex-col">
-      {#each data.tasks as task}
-        <Accordion.Item value={task.name}>
-          <Accordion.Trigger>
-            {task.name}
-          </Accordion.Trigger>
-          <Accordion.Content>
-            {task.description}
-          </Accordion.Content>
-        </Accordion.Item>
-      {/each}
-    </Accordion.Root>
-    <div class="tech-stack">
-      <div class="font-medium">Tech Stack(s):</div>
-      {#each data.techStacks.sort((a, b) => a
-          .toLowerCase()
-          .localeCompare(b.toLowerCase())) as thisTechStack}
-        <Badge
-          variant="outline"
-          class="cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
-            thisTechStack,
-          )
-            ? 'bg-gray-300 dark:bg-neutral-800'
-            : ''}"
-          on:click={() => toggleSkill(thisTechStack)}>{thisTechStack}</Badge
-        >
-      {/each}
-    </div>
-    <div class="tags">
-      <div class="font-medium">Tag(s):</div>
-      {#each data.tags as tag}
-        <Badge
-          variant="outline"
-          class="capitalize cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
-            tag,
-          )
-            ? 'bg-gray-300 dark:bg-neutral-800'
-            : ''}"
-          on:click={() => toggleSkill(tag)}>{tag}</Badge
-        >
-      {/each}
-    </div>
+    {#if data.tasks.length > 0}
+      <Accordion.Root type="multiple" class="list-decimal list-inside flex flex-col">
+        {#each data.tasks as task}
+          <Accordion.Item value={task.name}>
+            <Accordion.Trigger>
+              {task.name}
+            </Accordion.Trigger>
+            <Accordion.Content>
+              {task.description}
+            </Accordion.Content>
+          </Accordion.Item>
+        {/each}
+      </Accordion.Root>
+    {/if}
+    {#if data.techStacks.length > 0}
+      <div class="tech-stack">
+        <div class="font-medium">Tech Stack(s):</div>
+        {#each data.techStacks.sort((a, b) => a
+            .toLowerCase()
+            .localeCompare(b.toLowerCase())) as thisTechStack}
+          <Badge
+            variant="outline"
+            class="cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
+              thisTechStack,
+            )
+              ? 'bg-gray-300 dark:bg-neutral-800'
+              : ''}"
+            on:click={() => toggleSkill(thisTechStack)}>{thisTechStack}</Badge
+          >
+        {/each}
+      </div>
+    {/if}
+    {#if data.tags.length > 0}
+      <div class="tags">
+        <div class="font-medium">Tag(s):</div>
+        {#each data.tags as tag}
+          <Badge
+            variant="outline"
+            class="capitalize cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
+              tag,
+            )
+              ? 'bg-gray-300 dark:bg-neutral-800'
+              : ''}"
+            on:click={() => toggleSkill(tag)}>{tag}</Badge
+          >
+        {/each}
+      </div>
+    {/if}
   </Card.Content>
   <Card.Footer>
     <Dialog.Root>
@@ -112,44 +118,50 @@
           </Dialog.Description>
         </Dialog.Header>
         <div class="flex flex-col gap-4">
-          <ol class="list-decimal list-inside flex flex-col gap-2">
-            {#each data.tasks as task}
-              <li>
-                <span class="font-medium">{task.name}</span>
-                <p class="text-sm">{task.description}</p>
-              </li>
-            {/each}
-          </ol>
-          <div class="tech-stack">
-            <div class="font-medium">Tech Stack(s):</div>
-            {#each data.techStacks.sort((a, b) => a
-                .toLowerCase()
-                .localeCompare(b.toLowerCase())) as thisTechStack}
-              <Badge
-                variant="outline"
-                class="cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
-                  thisTechStack,
-                )
-                  ? 'bg-gray-300 dark:bg-neutral-800'
-                  : ''}"
-                on:click={() => toggleSkill(thisTechStack)}>{thisTechStack}</Badge
-              >
-            {/each}
-          </div>
-          <div class="tags">
-            <div class="font-medium">Tag(s):</div>
-            {#each data.tags as tag}
-              <Badge
-                variant="outline"
-                class="capitalize cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
-                  tag,
-                )
-                  ? 'bg-gray-300 dark:bg-neutral-800'
-                  : ''}"
-                on:click={() => toggleSkill(tag)}>{tag}</Badge
-              >
-            {/each}
-          </div>
+          {#if data.tasks.length > 0}
+            <ol class="list-decimal list-inside flex flex-col gap-2">
+              {#each data.tasks as task}
+                <li>
+                  <span class="font-medium">{task.name}</span>
+                  <p class="text-sm">{task.description}</p>
+                </li>
+              {/each}
+            </ol>
+          {/if}
+          {#if data.techStacks.length > 0}
+            <div class="tech-stack">
+              <div class="font-medium">Tech Stack(s):</div>
+              {#each data.techStacks.sort((a, b) => a
+                  .toLowerCase()
+                  .localeCompare(b.toLowerCase())) as thisTechStack}
+                <Badge
+                  variant="outline"
+                  class="cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
+                    thisTechStack,
+                  )
+                    ? 'bg-gray-300 dark:bg-neutral-800'
+                    : ''}"
+                  on:click={() => toggleSkill(thisTechStack)}>{thisTechStack}</Badge
+                >
+              {/each}
+            </div>
+          {/if}
+          {#if data.tags.length > 0}
+            <div class="tags">
+              <div class="font-medium">Tag(s):</div>
+              {#each data.tags as tag}
+                <Badge
+                  variant="outline"
+                  class="capitalize cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors {activeSkills.has(
+                    tag,
+                  )
+                    ? 'bg-gray-300 dark:bg-neutral-800'
+                    : ''}"
+                  on:click={() => toggleSkill(tag)}>{tag}</Badge
+                >
+              {/each}
+            </div>
+          {/if}
         </div>
       </Dialog.Content>
     </Dialog.Root>

@@ -116,6 +116,15 @@
       ]
     },
     {
+      "type": "projects - personal",
+      "name": "Work Utils",
+      "description": "A collection of small utilities for day-to-day work. Hosted at work-utils.jeremiaaxel.dev.",
+      "url": "https://work-utils.jeremiaaxel.dev",
+      "tasks": [],
+      "techStacks": [],
+      "tags": []
+    },
+    {
       "type": "work experiences - fulltime",
       "name": "Software Engineer",
       "organization": "Quantum Teknologi Nusantara",
