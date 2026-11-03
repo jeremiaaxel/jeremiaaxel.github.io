@@ -2,6 +2,7 @@
   import * as Menubar from '$lib/components/ui/menubar';
   import Profile from '$lib/data/profile';
   import { appUrl } from '$lib/config';
+  import { BookOpen, Wallet, Wrench } from 'lucide-svelte';
   import DarkModeToggle from './dark-mode-toggle.svelte';
 </script>
 
@@ -26,19 +27,27 @@
       </Menubar.Content>
     </Menubar.Menu>
     <Menubar.Menu>
-      <Menubar.Trigger>
-        <a href={appUrl('blog')}>Blog</a>
-      </Menubar.Trigger>
-    </Menubar.Menu>
-    <Menubar.Menu>
-      <Menubar.Trigger>
-        <a href={appUrl('moneybackward')}>Money Backward</a>
-      </Menubar.Trigger>
-    </Menubar.Menu>
-    <Menubar.Menu>
-      <Menubar.Trigger>
-        <a href={appUrl('work-utils')}>Work Utils</a>
-      </Menubar.Trigger>
+      <Menubar.Trigger class="cursor-pointer">More apps</Menubar.Trigger>
+      <Menubar.Content>
+        <Menubar.Item class="cursor-pointer">
+          <a href={appUrl('blog')} class="capitalize flex gap-2">
+            <BookOpen class="size-4" />
+            Blog
+          </a>
+        </Menubar.Item>
+        <Menubar.Item class="cursor-pointer">
+          <a href={appUrl('moneybackward')} class="capitalize flex gap-2">
+            <Wallet class="size-4" />
+            Money Backward
+          </a>
+        </Menubar.Item>
+        <Menubar.Item class="cursor-pointer">
+          <a href={appUrl('work-utils')} class="capitalize flex gap-2">
+            <Wrench class="size-4" />
+            Work Utils
+          </a>
+        </Menubar.Item>
+      </Menubar.Content>
     </Menubar.Menu>
     <Menubar.Menu>
       <Menubar.Trigger class="cursor-pointer !ml-auto !bg-opacity-0">
